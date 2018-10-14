@@ -1,0 +1,7 @@
+.container-carousel {
+    padding: 0;
+    height: 30vh;
+}
+ .container-carousel .carousel-inner {
+     height: 60vh;
+ }
