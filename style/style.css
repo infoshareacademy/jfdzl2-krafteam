@@ -2,6 +2,10 @@
     padding: 0;
     height: 30vh;
 }
- .container-carousel .carousel-inner {
+.container-carousel .carousel-inner {
      height: 60vh;
  }
+
+.title-carousel {
+    font-size: 56px;
+}
