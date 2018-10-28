@@ -4,6 +4,7 @@
 }
 .container-carousel .carousel-inner {
      height: 60vh;
+     margin-top: 120px;
  }
 
 .title-carousel {
@@ -14,4 +15,5 @@
     background-color: rgba(0,0,0, 0.5);
     right: unset;
     left: unset;
+    min-width: 100%;
 }
