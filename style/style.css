@@ -1,0 +1,17 @@
+.container-carousel {
+    padding: 0;
+    height: 30vh;
+}
+.container-carousel .carousel-inner {
+     height: 60vh;
+ }
+
+.title-carousel {
+    font-size: 56px;
+}
+
+.carousel-caption {
+    background-color: rgba(0,0,0, 0.5);
+    right: unset;
+    left: unset;
+}
