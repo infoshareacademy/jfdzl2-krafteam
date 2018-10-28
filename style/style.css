@@ -17,3 +17,8 @@
     left: unset;
     min-width: 100%;
 }
+
+.feature-img {
+    height: 100%;
+    width: 100%
+}
