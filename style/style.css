@@ -23,3 +23,26 @@
     left: unset;
     min-width: 100%;
 }
+
+.container-fluid.container-sign {
+    align-items: center;
+    padding: 0;
+    background: gray;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.signup-title {
+    font-size: 32px;
+}
+
+.signup-desc {
+    font-size: 14px;
+    text-align: center;
+}
