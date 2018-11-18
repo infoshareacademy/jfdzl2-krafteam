@@ -23,3 +23,8 @@
     left: unset;
     min-width: 100%;
 }
+
+.social-button {
+    padding: 20px;
+    margin-top: 20px;
+}
