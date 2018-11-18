@@ -31,13 +31,13 @@ footer {
     height: 50px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
-    color: white;
+    color: #212529;
     border-radius: 100%;
     outline: none;
-    background-color: #212529;
+    background-color: #fed136;
   }
   
   ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
-    background-color: #fed136;
+    background-color: #fed33673;
   }
   
