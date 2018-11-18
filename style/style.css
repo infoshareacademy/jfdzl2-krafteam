@@ -25,7 +25,8 @@
 }
 
 .container-fluid.container-sign {
-    align-items: center;
+    display: flex;
+    justify-content: center;
     padding: 0;
     background: gray;
 }
@@ -33,9 +34,9 @@
 .input-form {
     display: flex;
     flex-direction: column;
-    align-self: center;
     align-items: center;
     padding: 10px;
+    width: 120vh;
 }
 
 .signup-title {
