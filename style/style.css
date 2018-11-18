@@ -24,6 +24,31 @@
     min-width: 100%;
 }
 
-.container {
-    margin: 0 5px;
+.container-fluid.container-sign {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    background: gray;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 80vh;
+}
+
+.signup-title {
+    font-size: 32px;
+}
+
+.signup-desc {
+    font-size: 14px;
+    text-align: center;
+}
+
+.social-button {
+    padding: 20px;
+    margin-top: 20px;
 }
