@@ -52,3 +52,10 @@
     padding: 20px;
     margin-top: 20px;
 }
+
+.dark-bg-color{
+    background-color: #212529;
+}
+.footer-text {
+    color: white;
+}
