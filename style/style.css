@@ -24,6 +24,7 @@
     min-width: 100%;
 }
 
+<<<<<<< HEAD
 .container-fluid.container-sign {
     display: flex;
     justify-content: center;
@@ -46,4 +47,9 @@
 .signup-desc {
     font-size: 14px;
     text-align: center;
+=======
+.social-button {
+    padding: 20px;
+    margin-top: 20px;
+>>>>>>> develop
 }
