@@ -7,7 +7,70 @@
     height: 120px;
 }
 
-.team-member h4{
+.features-unit h4{
     height: 60px;
+
+}
+.container-carousel {
+    padding: 0;
+    height: 65vh;
+}
+.container-carousel .carousel-inner {
+     height: 60vh;
+     margin-top: 120px;
+}
+
+@media only screen and (max-width: 992px) {
+    .container-carousel .carousel-inner{
+        margin-top: 86px;
+    }
+}
+
+.title-carousel {
+    font-size: 56px;
+}
+
+.carousel-caption {
+    background-color: rgba(0,0,0, 0.5);
+    right: unset;
+    left: unset;
+    min-width: 100%;
+}
+
+.container-fluid.container-sign {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    background: gray;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 80vh;
+}
+
+.signup-title {
+    font-size: 32px;
+}
+
+.signup-desc {
+    font-size: 14px;
+    text-align: center;
+}
+
+.social-button {
+    padding: 20px;
+    margin-top: 20px;
+    
+}
+
+.dark-bg-color{
+    background-color: #212529;
+}
+.footer-text {
+    color: white;
 }
 
