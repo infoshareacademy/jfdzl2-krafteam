@@ -1,0 +1,31 @@
+.container-carousel {
+    padding: 0;
+    height: 30vh;
+}
+.container-carousel .carousel-inner {
+     height: 60vh;
+     margin-top: 120px;
+ }
+
+.title-carousel {
+    font-size: 56px;
+}
+
+.carousel-caption {
+    background-color: rgba(0,0,0, 0.5);
+    right: unset;
+    left: unset;
+    min-width: 100%;
+}
+
+.feature-img {
+    height: 100%;
+    width: 100%
+}
+
+.container h1{
+    text-align: center;
+}
+.container p{
+    padding-top: 30%;
+}
