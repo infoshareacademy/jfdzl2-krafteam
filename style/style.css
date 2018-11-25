@@ -57,7 +57,11 @@
 .dark-bg-color{
     background-color: #212529;
 }
-.footer-text {
+.white-text {
     color: white;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
 
