@@ -41,5 +41,5 @@ footer {
     background-color: #fed33673;
   }
   @media (max-width: 599px) {
-    .rwd-img {width: 97%;}
+    .rwd-img {width: 95%;}
   }
