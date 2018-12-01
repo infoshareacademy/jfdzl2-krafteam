@@ -24,11 +24,17 @@
     min-width: 100%;
 }
 
+#sign {
+    height: 226px;
+    padding: 3px 0px;
+    background: #343a40;
+}
+
 .container-fluid.container-sign {
     display: flex;
     justify-content: center;
     padding: 0;
-    background: gray;
+    color: whitesmoke;
 }
 
 .input-form {
@@ -46,12 +52,12 @@
 .signup-desc {
     font-size: 14px;
     text-align: center;
+    font-weight: lighter;
 }
 
 .social-button {
     padding: 20px;
     margin-top: 20px;
-    
 }
 
 .dark-bg-color{
