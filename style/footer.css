@@ -2,8 +2,8 @@
 footer {
     padding: 25px 0;
     text-align: center;
-  }
-  
+}
+
   footer span.copyright {
     font-size: 90%;
     line-height: 40px;
@@ -36,7 +36,7 @@ footer {
     outline: none;
     background-color: #fed136;
   }
-  
+
   ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
     background-color: #fed33673;
   }
