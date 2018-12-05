@@ -388,6 +388,10 @@ header.masthead .intro-text .intro-heading {
   margin-bottom: 30px;
 }
 
+.text-center>p{
+  color: #6c757d!;
+}
+
 .timeline {
   position: relative;
   padding:4px 0 0 0;
