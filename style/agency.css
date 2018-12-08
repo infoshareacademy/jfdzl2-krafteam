@@ -382,6 +382,9 @@ header.masthead .intro-text .intro-heading {
 }
 
 /* --more-- */
+.container{
+  margin: auto;
+}
 
 .text-center{
   color:#343a40;
