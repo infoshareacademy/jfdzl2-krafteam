@@ -3,18 +3,15 @@
     padding-bottom: 20px;
 }
 
-/* .p-height{
-    height: 120px;
-} */
-
 .features-unit h4{
     height: 60px;
-
 }
+
 .container-carousel {
     padding: 0;
     height: 65vh;
 }
+
 .container-carousel .carousel-inner {
      height: 60vh;
      margin-top: 30px;
@@ -89,6 +86,7 @@
 .dark-bg-color{
     background-color: #212529;
 }
+
 .white-text {
     color: white;
 }
@@ -96,14 +94,6 @@
 .team-member h4 {
     height: 60px;
 }
-
-/* .team-member p {
-    height: 250px;
-}
-
-.features-unit p {
-    height: 100px;
-} */
 
 .link-background {
     padding: 10px;
@@ -114,6 +104,7 @@
 html {
     scroll-behavior: smooth;
   }
+
 body{
     position: relative;
 }
