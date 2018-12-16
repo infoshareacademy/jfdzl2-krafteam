@@ -1,0 +1,29 @@
+.game-container{
+display: flex;
+
+
+}
+.game-board{
+    width: 500px;
+    height: 500px;
+    background-color: lightgray;
+    border: solid 1px gray;
+    display: flex;
+    margin-top: 100px;
+    margin-left: 25%;
+    flex-direction: column;
+}
+
+.wall{
+    width: 20px;
+    height: 20px;
+    background-color: black;
+}
+.game-bar{
+    width: 500px;
+    height: 40px;
+    background-color: black;
+}
+.fas.fa-beer{
+  color: #fed136;
+}
