@@ -382,6 +382,10 @@ header.masthead .intro-text .intro-heading {
 }
 
 /* --more-- */
+
+#more{
+  padding-top: 100px;
+}
 .container{
   margin: auto;
 }
@@ -396,6 +400,7 @@ header.masthead .intro-text .intro-heading {
     width: 100%;
     text-align: center;
     box-sizing: border-box;
+    padding-bottom: 30px;
 }
 .timeline {
   position: relative;
