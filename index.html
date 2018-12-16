@@ -21,51 +21,60 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
   <!-- Custom styles for this template -->
   <link href="style/agency.css" rel="stylesheet">
   <link href="style/style.css" rel="stylesheet">
   <link href="style/footer.css" rel="stylesheet">
+  <link href="style/cookies.css" rel="stylesheet">
   <title>BeerSeek</title>
+
+
 </head>
 
-<body id="page-top">
-  <!-- Navbar -->
-  <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top ">
-    <a class="navbar-brand" href="#page-top">
-      <img src="./images/icons/logo.jpg" width="60" height="60" class="d-inline-block align-top" alt="">
-      Beer Seek
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav nav-fill ">
-        <li class="nav-item active">
-          <a class="nav-link" href="#page-top">O NAS <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#features">FEATURES</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#more">MORE</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="#team">TEAM</a>
-        </li>
+<body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="50">
+  <nav id="mainNav" class="dark-bg-color">
+    <div class="navbar navbar-expand-lg navbar-dark dark-bg-color fixed-top container-fluid">
+      <div class="container">
 
-        <li class="nav-item">
-          <a class="nav-link " href="#app">APKA</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="#sign">PREMIERA</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="#contact">KONTAKT</a>
-        </li>
-      </ul>
+        <a class="navbar-brand" href="#page-top">
+          <img src="./images/icons/beer_logo.png" width="60" height="60" class="d-inline-block align-top" alt="">
+          Beer Seek
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav nav-fill ">
+            <li class="nav-item active">
+              <a class="nav-link" href="#page-top">O NAS <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features">FEATURES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#more">MORE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#team">TEAM</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link " href="#app">APKA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#sign">PREMIERA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#contact">KONTAKT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </nav>
+
   <div class="container-fluid container-carousel">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
@@ -156,8 +165,8 @@
       <div class="row">
         <div class="col-lg-12">
           <h3 class="text-center">BeerSeek - Twoja aplikacja barowa</h3>
-          <p>
-            Zapoznaj się z szerokimi możliwościami jakie daje Ci BeerSeek a następnie...ruszaj w miasto w poszukiwaniu swojego nowego ulubionego kraftowego! 
+          <p class="text-muted">
+            Zapoznaj się z szerokimi możliwościami jakie daje Ci BeerSeek a następnie...ruszaj w miasto w poszukiwaniu swojego nowego ulubionego kraftowego!
           </p>
           <ul class="timeline">
             <li>
@@ -290,7 +299,6 @@
         </div>
       </div>
     </div>
-
   </section>
 
   <!-- team-->
@@ -365,12 +373,6 @@
         </div>
       </div>
   </section>
-
-  <!--Contact us -->
-  <section>
-
-  </section>
-
   <!--App-->
   <section id="app">
 
@@ -410,7 +412,7 @@
       <div>
         <div class="row">
           <div class="col-md-4 txt_">
-            <aside class="footer-text">
+            <aside class="white-text">
               <h3>Tu nas znajdziesz</h3>
               <div>Inkubator Przedsiębiorczości <br>
                 Józefa Franczaka “Lalka” 43 <br>
@@ -449,7 +451,7 @@
       <div>
         <div class="container">
           <div>
-            <p class="footer-text">© 2018 KrafTeam. Wszystkie prawa zastrzeżone.</p>
+            <p class="white-text">© 2018 KrafTeam. Wszystkie prawa zastrzeżone.</p>
           </div>
         </div>
       </div>
@@ -457,11 +459,24 @@
   </footer>
 
 
+  <!--Cookies-->
+
+<div id="cookies">
+  <span>
+      <p>Nasza strona internetowa używa plików cookies (tzw. ciasteczka)  w celach statystycznych, reklamowych oraz funkcjonalnych. Dzięki   nim możemy indywidualnie dostosować stronę do twoich potrzeb.   Każdy może zaakceptować pliki cookies albo ma możliwość wyłączenia  ich w przeglądarce, dzięki czemu nie będą zbierane żadne   informacje.
+      <a href="http://ciasteczka.eu/#jak-wylaczyc-ciasteczka" target="_blank">Dowiedz się więcej jak je wyłączyć.</a></p>
+    </span>
+  <div class="cookie-btn">
+    <button id="accept-cookie">OK, rozumiem.</button>
+  </div>
+</div>
 
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
+
+  <script src="script/cookies.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
