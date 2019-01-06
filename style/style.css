@@ -112,3 +112,10 @@ html {
 body{
     position: relative;
 }
+
+
+.score-table th, .score-table td{
+    border: 1px solid #dee2e6;
+    padding: .2rem;
+
+}
