@@ -377,63 +377,26 @@
       </div>
   </section>
   <!--App-->
-  <section class="bg-light" id="sign">
-    <!--   
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non accusamus expedita ipsa quas ad ullam? Totam deleniti
-    rem, commodi perspiciatis incidunt in! Totam nihil eum nostrum illum corrupti ex ipsa, ea perspiciatis tempore,
-    fuga deserunt, repudiandae est! Provident, vitae fuga porro necessitatibus recusandae, nisi dignissimos animi ullam
-    iure suscipit mollitia autem, delectus rem? Voluptatum rem voluptate mollitia corporis, est iusto blanditiis, non
-    exercitationem tenetur reiciendis doloribus ipsum, numquam expedita eligendi! Reprehenderit tempora obcaecati,
-    pariatur tenetur doloremque iure amet et dignissimos? Cupiditate blanditiis ipsa ad laudantium obcaecati,
-    aspernatur natus dignissimos magni laboriosam repellat sit ut illo aliquam odit quae temporibus inventore
-    reiciendis est sequi ullam! Necessitatibus eius neque omnis in officia dolor accusantium doloremque dignissimos
-    rerum facilis. Error maxime iste cum sit doloremque, voluptate debitis quidem. Adipisci, ratione! Consectetur
-    impedit architecto corporis saepe earum iure iusto, cupiditate cum, quos minima harum veritatis id debitis fugit
-    delectus magnam laudantium laboriosam non ducimus blanditiis distinctio accusantium nam. Numquam modi neque impedit
-    delectus dolore accusantium vero odit deleniti. Incidunt rerum laborum, cupiditate voluptates consequuntur autem
-    eius atque cumque! Nostrum expedita voluptatum quis asperiores? Perferendis distinctio id mollitia consequatur
-    dolor hic, dolores deserunt fuga quae odit sapiente commodi, maxime libero illum sint tempora, doloremque maiores?
-    Doloremque, magni? Perspiciatis deleniti magni cum tempora ut dignissimos enim harum dolor distinctio
-    necessitatibus pariatur quae assumenda doloremque, nihil expedita consequuntur qui, in nemo atque perferendis,
-    saepe nisi laudantium odit culpa. Corrupti optio ratione officiis quisquam nostrum culpa doloribus, enim eos aut
-    fuga repellat! Reiciendis iusto expedita sapiente reprehenderit? Dolor praesentium illum exercitationem error
-    voluptates consectetur suscipit. Vel, exercitationem rerum eos soluta suscipit odit totam atque est optio mollitia
-    corrupti corporis? Numquam ratione fugit magni. Numquam nemo magnam inventore eum nesciunt cumque natus amet
-    repudiandae fugiat odio, optio dicta quod nobis a quia quidem eos, nisi vitae veritatis unde earum molestias
-    eveniet officiis quae? Facilis dolor asperiores laboriosam facere ipsum reprehenderit autem et, eligendi dicta
-    voluptatem aliquam. Cupiditate autem, dicta voluptatibus minima, dolor asperiores rem maxime hic incidunt molestias
-    nulla voluptas! Neque sequi deserunt tempora quibusdam cumque similique voluptates laudantium nihil facere, sed,
-    voluptatibus blanditiis rem quam rerum molestiae id quasi aperiam tenetur, magnam dolor! Voluptate, necessitatibus?
-    Repudiandae quasi non voluptatibus laborum possimus quae earum sapiente laudantium quaerat enim velit totam
-    nesciunt nobis porro, sunt nam quidem, eum vero aut quas illum facilis dolores, ea id. Eaque adipisci praesentium
-    quisquam esse natus itaque saepe ipsa cum laborum officia, sint quasi aliquam temporibus iste provident enim soluta
-    earum sequi magni facere corporis. Corrupti, voluptate. Maiores tempora consequuntur consequatur nobis quibusdam!
-    Cum nulla impedit, consectetur fugit iure necessitatibus dicta, optio in non nam eos eum deserunt dignissimos
-    reprehenderit adipisci, repellat delectus iusto amet error. A maiores natus eum autem aspernatur aliquid quidem
-    odit doloribus magni at earum, ex facere cum officia dicta vel exercitationem, aut sit velit! Nisi, delectus iusto
-    ex facere pariatur atque unde reiciendis quidem ipsa vero totam quae laboriosam! Laudantium ullam dicta eveniet,
-    maiores vel, delectus, incidunt dolores fuga assumenda voluptatum commodi minus. Corporis a cupiditate quod facilis
-    fugit?
- -->
-      <div class="container-fluid container-app">
-        <form action="mailto:gkolek@gazeta.pl?subject=temat" method="POST" enctype="text/plain" class="input-form">
-          <h2 class="section-heading text-uppercase">Apka za e-mail</h2>
-          <h4 class="text-center-h">Podaj nam swój adres-mail, a wyślemy Ci link do mini-gry.</h4>
-          <div class="input-group email-input">
-            <div class="input-group-prepend">
-              <div class="input-group-text">@</div>
-            </div>
-            <input name="mail" id="inlineFormInputGroupUsername" class="form-control" type="email" placeholder="Twój adres e-mail">
+  <section class="bg-light" id="app">
+    <div class="container-fluid container-app">
+      <form action="mailto:gkolek@gazeta.pl?subject=temat" method="POST" enctype="text/plain" class="input-form">
+        <h2 class="section-heading text-uppercase">Apka za e-mail</h2>
+        <h4 class="text-center-h">Podaj nam swój adres-mail, a wyślemy Ci link do mini-gry.</h4>
+        <div class="input-group email-input">
+          <div class="input-group-prepend">
+            <div class="input-group-text">@</div>
           </div>
-          <div>
-            <button id="sendBtn" class="btn btn-warning btn-app" type="submit">Wyślij</button>
-            <button id="resetBtn" class="btn btn-danger btn-app" type="reset">Zrezygniuj</button>
-          </div>
-          <div>
-            <input type="hidden" name="_subject" value="New submission!" />
-          </div>
-        </form>
-      </div>
+          <input name="mail" id="inlineFormInputGroupPlayerName" class="form-control" type="text" placeholder="Twój adres e-mail">
+        </div>
+        <div>
+          <button id="sendBtn" class="btn btn-warning btn-app" type="submit">Wyślij</button>
+          <button id="resetBtn" class="btn btn-danger btn-app" type="reset">Zrezygniuj</button>
+        </div>
+        <div>
+          <input type="hidden" name="_subject" value="Apka za e-mail!!!" />
+        </div>
+      </form>
+    </div>
 
 
   </section>
@@ -452,13 +415,13 @@
           <div class="input-group-prepend">
             <div class="input-group-text">@</div>
           </div>
-          <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="name@mail.com">
+          <input type="text" class="form-control" id="getEmail" placeholder="name@mail.com">
         </div>
         <div class="form-group form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Akceptuje regulamin</label>
         </div>
-        <button type="submit" class="btn btn-primary btn-sign">Zapisz mnie</button>
+        <button type="submit" class="btn btn-primary btn-sign" onclick="checkEmailAddress()">Zapisz mnie</button>
       </form>
     </div>
   </section>
@@ -537,8 +500,8 @@
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-
-  <script src="script/cookies.js"></script>
+  <script src="./script/cookies.js"></script>
+  <script src="./script/main.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
