@@ -94,6 +94,14 @@
     width: 80vh;
 }
 
+.input-form h6{
+    padding-bottom: 5px;
+}
+
+.input-form .form-group{
+    margin-top: 10px;
+}
+
 .signup-title {
     font-size: 32px;
 }
