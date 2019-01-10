@@ -379,21 +379,22 @@
   <!--App-->
   <section class="bg-light" id="app">
     <div class="container-fluid container-app">
-      <form action="mailto:gkolek@gazeta.pl?subject=temat" method="POST" enctype="text/plain" class="input-form">
+      <form class="input-form" id="emailForm">
         <h2 class="section-heading text-uppercase">Apka za e-mail</h2>
         <h4 class="text-center-h">Podaj nam swój adres-mail, a wyślemy Ci link do mini-gry.</h4>
         <div class="input-group email-input">
           <div class="input-group-prepend">
             <div class="input-group-text">@</div>
           </div>
-          <input name="mail" id="inlineFormInputGroupPlayerName" class="form-control" type="text" placeholder="Twój adres e-mail">
+          <input name="mail" id="getEmail" class="form-control" type="text" placeholder="name@mail.com">
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Akceptuje regulamin</label>
         </div>
         <div>
           <button id="sendBtn" class="btn btn-warning btn-app" type="submit">Wyślij</button>
           <button id="resetBtn" class="btn btn-danger btn-app" type="reset">Zrezygniuj</button>
-        </div>
-        <div>
-          <input type="hidden" name="_subject" value="Apka za e-mail!!!" />
         </div>
       </form>
     </div>
@@ -415,13 +416,13 @@
           <div class="input-group-prepend">
             <div class="input-group-text">@</div>
           </div>
-          <input type="text" class="form-control" id="getEmail" placeholder="name@mail.com">
+          <input type="text" class="form-control" id="inlineFormInputGroupUserName" placeholder="name@mail.com">
         </div>
         <div class="form-group form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Akceptuje regulamin</label>
         </div>
-        <button type="submit" class="btn btn-primary btn-sign" onclick="checkEmailAddress()">Zapisz mnie</button>
+        <button type="submit" class="btn btn-primary btn-sign">Zapisz mnie</button>
       </form>
     </div>
   </section>
