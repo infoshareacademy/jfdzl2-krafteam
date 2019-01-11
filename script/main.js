@@ -20,6 +20,8 @@ function handleForm(event) {
 
         if (testAt > 0 && testDot > 0) {
             location.replace("./game-board.html")
+            // after merging the game-menu branch replace to:
+            // location.replace("./game-menu.html")
             console.log('redirect succeed')
         }
         console.log('redirect failed')
