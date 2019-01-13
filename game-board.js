@@ -6,7 +6,7 @@ class Player {
         this.registerEvents();
     }
     moveRight() {
-        if (this.x < 20) {
+        if (this.x < 19) {
             this.x++;
             this.playerElement.style.left = this.x * 5 + '%';
             console.log('move right')
@@ -27,7 +27,7 @@ class Player {
         }
     }
     moveDown() {
-        if (this.y < 20) {
+        if (this.y < 19) {
             this.y++;
             this.playerElement.style.top = this.y * 5 + '%';
             console.log('move down');
