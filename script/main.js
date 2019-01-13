@@ -1,5 +1,16 @@
 var emailForm = document.getElementById('emailForm')
 
+    var emailReminderLabel = document.createElement('label')
+    var emailReminderText = document.createTextNode('Proszą wpisać adres o konstrukcji name@email.com (label via js)');
+    var emailReminderNode = document.querySelector('.email-input')
+    emailReminderNode.appendChild(emailReminderLabel)
+    emailReminderLabel.appendChild(emailReminderText)
+    emailReminderLabel.style.display = ('block')
+
+    // var emailReminderNode = document.querySelector('#emailVerif')
+    // var emailReminderText = document.createTextNode('Proszą wpisać adres o konstrukcji name@email.com (label via html)');
+    // emailReminderNode.appendChild(emailReminderText)
+
 
 function myCheck() {
 }
@@ -8,8 +19,11 @@ emailForm.addEventListener('submit', myCheck)
 function handleForm(event) {
     event.preventDefault()
 
-    var checkBox = document.getElementById("myCheck");
+
+
+    var checkBox = document.getElementById("checkboxVerif");
     var myRemind = document.getElementById("remind");
+
     if (checkBox.checked == true) {
         myRemind.style.display = "none";
         console.log('checkbox succeed')
