@@ -1,15 +1,16 @@
 .game-container{
 display: flex;
+flex-direction: column;
 
 
 }
 .game-board{
     width: 500px;
     height: 500px;
-    background-color: lightgray;
+    background-color: rgb(37, 143, 10);
     border: solid 1px gray;
     display: flex;
-    margin-top: 100px;
+    margin-top: 10%;
     margin-left: 25%;
     flex-direction: column;
 }
@@ -18,12 +19,21 @@ display: flex;
     width: 20px;
     height: 20px;
     background-color: black;
+   
 }
 .game-bar{
     width: 500px;
     height: 40px;
     background-color: black;
+
+
+    
 }
 .fas.fa-beer{
   color: #fed136;
+  
 }
+.fas.fa-poo{
+    color: rgba(124, 65, 65, 0.966)
+}
+
