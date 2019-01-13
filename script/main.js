@@ -15,13 +15,15 @@ function handleForm(event) {
         console.log('checkbox succeed')
         var getEmail = document.getElementById('getEmail');
         var emailValue = getEmail.value;
-        var testAt = emailValue.indexOf('@');
-        var testDot = emailValue.indexOf('.');
+        // var testAt = emailValue.indexOf('@');
+        // var testDot = emailValue.indexOf('.');
 
-        if (testAt > 0 && testDot > 0) {
+        // if (testAt > 0 && testDot > 0) {
+
+        var regExpr = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        if (regExpr.test(String(emailValue).toLowerCase())) {
             location.replace("./game-menu.html")
-            // after merging the game-menu branch replace to:
-            // location.replace("./game-menu.html")
             console.log('redirect succeed')
         }
         console.log('redirect failed')
