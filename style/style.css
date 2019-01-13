@@ -105,6 +105,13 @@
     border-radius: 10px;
 }
 
+.link-background:hover {
+    background-color: #fed136;
+    color: #212529;
+    transition: all 500ms;
+    text-decoration: none;
+}
+
 html {
     scroll-behavior: smooth;
   }
