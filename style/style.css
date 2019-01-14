@@ -24,9 +24,9 @@
 }
 
 @media only screen and (min-width: 992px) {
-    .team-member p {
+    /* .team-member p {
         height: 250px;
-    }
+    } */
 
     .features-unit p {
         height: 100px;
