@@ -11,11 +11,14 @@ function myCheck() {
 function handleForm(event) {
     event.preventDefault()
 
-    var checkBox = document.getElementById("checkboxVerif");
-    var myRemind = document.getElementById("remind");
+    var checkBox = document.getElementById("myCheck");
+    // var myRemind = document.getElementById("checkboxRemind");
+        var checkboxReminderNode = document.querySelector('#checkboxRemind')
 
     if (checkBox.checked == true) {
-        myRemind.style.display = "none";
+        // myRemind.style.display = "none";
+        checkboxReminderNode.innerText = ''
+
         console.log('checkbox succeed')
         var getEmail = document.getElementById('getEmail');
         var emailValue = getEmail.value;
@@ -29,12 +32,13 @@ function handleForm(event) {
         // emailReminderLabel.innerText = 'Proszą wpisać adres o konstrukcji name@email.com'
         // emailReminderLabel.style.display = 'block'
 
-        var emailReminderNode = document.querySelector('#emailVerif')
+        var emailReminderNode = document.querySelector('#emailRemind')
         emailReminderNode.innerText = 'Proszą wpisać adres o konstrukcji name@email.com'
 
         console.log('redirect failed')
     } else {
-        myRemind.style.display = "block";
+        // myRemind.style.display = "block";
+        checkboxReminderNode.innerText = 'Aby przejść dalej, zaakceptuj regulamin (kod js)'
         console.log('checkbox failed')
     }
 }
