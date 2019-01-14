@@ -24,9 +24,9 @@
 }
 
 @media only screen and (min-width: 992px) {
-    .team-member p {
+    /* .team-member p {
         height: 250px;
-    }
+    } */
 
     .features-unit p {
         height: 100px;
@@ -126,3 +126,53 @@ body{
     padding: .2rem;
 
 }
+
+/*-----//-----*/
+/* Team photos flipping, settings below */
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 225px;
+    height: 225px;
+    line-height: 225px;
+    margin: auto;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden panel */
+.back {
+	transform: rotateY(180deg);
+}
+/* -----//----- */
