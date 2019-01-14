@@ -29,13 +29,21 @@ max-height: 100%;
     /* position: relative; */
 }
 
-.wall {
-    width: 20px;
-    height: 20px;
+.game-element{
+    width: 5%;
+    height: 5%;
+}
+.wall{
+    
     background-color: black;
 
 }
-.fas.fa-beer {
+
+.fas.fa-grin-beam{
+
+}
+
+.fas.fa-beer{
   color: #fed136;
 }
 .fas.fa-poo {
