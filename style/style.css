@@ -49,7 +49,6 @@
 }
 
 #app {
-    height:420px;
     padding-top: 80px;
     padding-bottom: 20px;
     margin: 20px 0px;
@@ -58,8 +57,8 @@
 .btn-app {
     color: black;
     width: 150px;
+    margin-top: auto;
 
-    align-items: flex-end;
 }
 
 .container-fluid.container-app {
@@ -68,11 +67,13 @@
     padding: 0px;
     color: black;
     margin: 5px 0px;
+    height: 320px;
 }
 
 .checkbox-area{
     padding: 20px 0 0;
     margin: 10px 0 0;
+    
 }
 
 #sign {
