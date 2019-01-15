@@ -26,10 +26,10 @@
 @media only screen and (min-width: 992px) {
     .team-member p {
         height: 250px;
-    }
+    } my-form-group
 
-    .features-unit p {
-        height: 100px;
+    . my-form-group
+      my-form-group
     }
 
     .p-height{
@@ -49,7 +49,7 @@
 }
 
 #app {
-    height:380px;
+    height:420px;
     padding-top: 80px;
     padding-bottom: 20px;
     margin: 20px 0px;
@@ -58,7 +58,8 @@
 .btn-app {
     color: black;
     width: 150px;
-    margin: 20px;
+
+    align-items: flex-end;
 }
 
 .container-fluid.container-app {
@@ -67,6 +68,11 @@
     padding: 0px;
     color: black;
     margin: 5px 0px;
+}
+
+.checkbox-area{
+    padding: 20px 0 0;
+    margin: 10px 0 0;
 }
 
 #sign {

@@ -13,13 +13,12 @@ function handleForm(event) {
 
     var checkBox = document.getElementById("myCheck");
     // var myRemind = document.getElementById("checkboxRemind");
-        var checkboxReminderNode = document.querySelector('#checkboxRemind')
+    var checkboxReminderNode = document.querySelector('#checkboxRemind')
 
     if (checkBox.checked == true) {
         // myRemind.style.display = "none";
         checkboxReminderNode.innerText = ''
 
-        console.log('checkbox succeed')
         var getEmail = document.getElementById('getEmail');
         var emailValue = getEmail.value;
 
@@ -27,7 +26,6 @@ function handleForm(event) {
 
         if (regExpr.test(String(emailValue).toLowerCase())) {
             location.replace("./game-menu.html")
-            console.log('redirect succeed')
         }
         // emailReminderLabel.innerText = 'Proszą wpisać adres o konstrukcji name@email.com'
         // emailReminderLabel.style.display = 'block'
@@ -35,10 +33,9 @@ function handleForm(event) {
         var emailReminderNode = document.querySelector('#emailRemind')
         emailReminderNode.innerText = 'Proszą wpisać adres o konstrukcji name@email.com'
 
-        console.log('redirect failed')
     } else {
         // myRemind.style.display = "block";
-        checkboxReminderNode.innerText = 'Aby przejść dalej, zaakceptuj regulamin (kod js)'
+        checkboxReminderNode.innerText = 'Aby przejść dalej, zaakceptuj regulamin'
         console.log('checkbox failed')
     }
 }
