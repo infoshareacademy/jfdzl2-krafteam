@@ -17,22 +17,30 @@
 </head>
 
 <body>
-    <div class="container game-container">
-        <div class="game-board">
-            <div class="game-bar"></div>
-            <div class="wall"></div>
-            <div class="gamer">
-                    <i class="fas fa-grin-beam"></i>
+    <main class="container">
+        <div class=" game-container">
+
+            <div class="game-bar">
+                <div>zegar</div>
+                <div>punkty</div>
             </div>
-            <div class="enemy">
-                    <i class="fas fa-poo"></i>
-            </div>
-            <div class="food">
-                    <i class="fas fa-beer"></i>
+            <div class="container-game-board">
+                <div class="game-board">
+                    <div class="wall game-element"></div>
+                    <div class="gamer game-element">
+                        <i class="fas fa-grin-beam"></i>
+                    </div>
+                    <div class="enemy game-element">
+                        <i class="fas fa-poo"></i>
+                    </div>
+                    <div class="food game-element">
+                        <i class="fas fa-beer"></i>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <script src="main.js"></script>
+    </main>
+    <script src="game-board.js"></script>
 </body>
 
 </html>
