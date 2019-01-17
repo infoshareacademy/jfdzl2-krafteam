@@ -3,8 +3,12 @@ body{
 }
 
 .bg-body{
-    background-image: url("https://v.wpimg.pl/MDE2Nzc1JC1qfWFPVgQ1d30HYRNNRj1qNV5hG0xXYi8wUSYUClBicX0Cf0tXB3xraHcKIzB6EnZoUzwOGlo4KDxtIBUUVHppdAZ-TlUJenF1HCQKBA==");
-    height: 100%
+    background-image: url("../images/piana-piwna.jpg") ;
+    /* no-repeat center center fixed; */
+    /* -webkit-background-size: cover;
+    -moz-background-size: cover;
+    /* -o-background-size: cover; */
+    background-size: cover; 
 }
 
 .game-container {
@@ -28,6 +32,9 @@ max-height: 100%;
         height: 60%;
         font-size: 62.5%;
     }
+    .game-element{
+        padding: 0%;
+    }
 }
 .game-bar {
     width: 100%;
@@ -50,6 +57,8 @@ max-height: 100%;
     height: 5%;
     font-size: 160%;
     text-align: center;
+    padding: 0.3%;
+
 }
 .wall{
     
