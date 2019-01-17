@@ -1,3 +1,12 @@
+body{
+    font-size: 100%;
+}
+
+.bg-body{
+    background-image: url("https://v.wpimg.pl/MDE2Nzc1JC1qfWFPVgQ1d30HYRNNRj1qNV5hG0xXYi8wUSYUClBicX0Cf0tXB3xraHcKIzB6EnZoUzwOGlo4KDxtIBUUVHppdAZ-TlUJenF1HCQKBA==");
+    height: 100%
+}
+
 .game-container {
 display: flex;
 flex-direction: column;
@@ -12,6 +21,13 @@ max-height: 100%;
 .container-game-board {
     height: 100%;
 	padding-bottom: 100%;
+}
+@media only screen and (max-width: 768px){
+    .game-container{
+        width: 98%;
+        height: 60%;
+        font-size: 62.5%;
+    }
 }
 .game-bar {
     width: 100%;
@@ -32,6 +48,8 @@ max-height: 100%;
 .game-element{
     width: 5%;
     height: 5%;
+    font-size: 160%;
+    text-align: center;
 }
 .wall{
     
@@ -39,18 +57,17 @@ max-height: 100%;
 
 }
 
-.fas.fa-grin-beam{
-
-}
-
-.fas.fa-beer{
+.food{
   color: #fed136;
+  
 }
-.fas.fa-poo {
-    color: rgba(124, 65, 65, 0.966)
+.enemy {
+    color: rgba(124, 65, 65, 0.966);
 }
 
 .gamer {
     position: absolute;
     transition: 0.3s;
+    color: rgb(248, 189, 116)
+
 }
