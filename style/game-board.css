@@ -1,46 +1,88 @@
-body{
+body {
     font-size: 100%;
 }
 
-.bg-body{
-    background-image: url("../images/piana-piwna.jpg") ;
+.bg-body {
+    background-image: url("../images/piana-piwna.jpg");
     /* no-repeat center center fixed; */
     /* -webkit-background-size: cover;
     -moz-background-size: cover;
     /* -o-background-size: cover; */
-    background-size: cover; 
+    background-size: cover;
 }
 
 .game-container {
-display: flex;
-flex-direction: column;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-width: 40vw;
-max-width: 100%;
-max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    max-width: 100%;
+    max-height: 100%;
 }
+
 .container-game-board {
     height: 100%;
-	padding-bottom: 100%;
+    padding-bottom: 100%;
 }
-@media only screen and (max-width: 768px){
-    .game-container{
+
+@media only screen and (max-width: 768px) {
+    .game-container {
         width: 98%;
         height: 60%;
         font-size: 62.5%;
     }
-    .game-element{
+
+    .game-element {
         padding: 0%;
     }
 }
+
 .game-bar {
     width: 100%;
     height: 6vh;
     background-color: black;
 }
+
+.timer-container {
+    text-align: right;
+    display: block;
+    padding: 5px;
+}
+
+.timer-display {
+    width: 100%;
+    font-size: 10px;
+    text-align: right;
+    margin: 0px auto;
+    color: #eee;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-weight: bold;
+    display: inline;
+}
+
+.buttons {
+    text-align: center;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: 10px;
+}
+
+.fa-play-circle {
+    background-color: #fed136;
+    padding: 5px;
+    border-radius: 10px;
+    color: #333;
+}
+
+.fa-power-off {
+    background-color: #fed136;
+    padding: 5px;
+    border-radius: 10px;
+}
+
 .game-board {
     height: 90%;
     width: 100%;
@@ -52,7 +94,7 @@ max-height: 100%;
     /* position: relative; */
 }
 
-.game-element{
+.game-element {
     width: 5%;
     height: 5%;
     font-size: 160%;
@@ -60,16 +102,18 @@ max-height: 100%;
     padding: 0.3%;
 
 }
-.wall{
-    
+
+.wall {
+
     background-color: black;
 
 }
 
-.food{
-  color: #fed136;
-  
+.food {
+    color: #fed136;
+
 }
+
 .enemy {
     color: rgba(124, 65, 65, 0.966);
 }
@@ -78,5 +122,4 @@ max-height: 100%;
     position: absolute;
     transition: 0.3s;
     color: rgb(248, 189, 116)
-
 }

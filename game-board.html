@@ -21,7 +21,15 @@
         <div class=" game-container">
 
             <div class="game-bar">
-                <div>zegar</div>
+                <div class="timer-container">
+                    <div id="display" class="timer-display">
+                        00:00:00
+                    </div>
+                    <div class="buttons">
+                        <i class="fas fa-play-circle" id="startStop" onclick="startStop()"></i>
+                        <i class="fas fa-power-off" id="reset" onclick="reset()"></i>
+                    </div>
+                </div>
                 <div>punkty</div>
             </div>
             <div class="container-game-board">
@@ -41,6 +49,7 @@
         </div>
     </main>
     <script src="game-board.js"></script>
+    <script src="script/timer.js"></script>
 </body>
 
 </html>
