@@ -50,22 +50,21 @@ function stopWatch() {
 
 }
 
-
 function startStop() {
-
+    var startStopButton = document.querySelector('#startStop');
     if (status === "stopped") {
-
-
         interval = window.setInterval(stopWatch, 1000);
         document.getElementById("startStop").innerHTML = "";
         status = "started";
 
+        startStopButton.classList = 'fas fa-stop';
     } else {
 
         window.clearInterval(interval);
         document.getElementById("startStop").innerHTML = "";
         status = "stopped";
 
+        startStopButton.classList = 'fas fa-play-circle';
     }
 
 }
