@@ -70,17 +70,27 @@ body {
     font-size: 10px;
 }
 
+
+
 .fa-play-circle {
-    background-color: #fed136;
+    background-color: #ecd06c;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
     color: #333;
 }
 
 .fa-power-off {
-    background-color: #fed136;
+    background-color: #ecd06c;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
+}
+
+.fa-play-circle:hover {
+    background-color: rgb(240, 68, 68);
+}
+
+.fa-power-off:hover {
+    background-color: rgb(240, 68, 68);
 }
 
 .game-board {
