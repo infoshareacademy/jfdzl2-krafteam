@@ -69,9 +69,8 @@ function startStop() {
 
 }
 
-
 function reset() {
-
+    var startStopButton = document.querySelector('#startStop')
     window.clearInterval(interval);
     seconds = 0;
     minutes = 0;
@@ -79,4 +78,5 @@ function reset() {
     document.getElementById("display").innerHTML = "00:00:00";
     document.getElementById("startStop").innerHTML = "";
 
+    startStopButton.classList = 'fas fa-play-circle';
 }
