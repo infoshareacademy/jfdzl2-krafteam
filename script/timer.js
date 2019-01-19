@@ -57,7 +57,7 @@ function startStop() {
         document.getElementById("startStop").innerHTML = "";
         status = "started";
 
-        startStopButton.classList = 'fas fa-stop';
+        startStopButton.classList = 'fas fa-pause-circle';
     } else {
 
         window.clearInterval(interval);
