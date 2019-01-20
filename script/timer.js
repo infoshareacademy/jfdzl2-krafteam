@@ -56,13 +56,14 @@ function startStop() {
         interval = window.setInterval(stopWatch, 1000);
         document.getElementById("startStop").innerHTML = "";
         status = "started";
-
+        game.start();
         startStopButton.classList = 'fas fa-pause-circle';
     } else {
 
         window.clearInterval(interval);
         document.getElementById("startStop").innerHTML = "";
         status = "stopped";
+        game.pause();
 
         startStopButton.classList = 'fas fa-play-circle';
     }
