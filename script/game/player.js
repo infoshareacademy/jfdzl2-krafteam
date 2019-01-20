@@ -1,36 +1,74 @@
 class Player {
-    constructor(walls) {
+    constructor(walls, lifeDown) {
+        this.handleLifeDown = lifeDown;
         this.playerElement = document.querySelector('.gamer');
         this.x = 0;
         this.y = 0;
         this.registerEvents();
+        this.renderPlayer(this.x, this.y);
+        this.walls = walls;
     }
+
+    wallsCheck(newPosition) {
+        let notCollision = true;
+        this.walls.forEach(e => {
+            console.log('wall:', e);
+            if(newPosition.x === e.x && newPosition.y === e.y) {
+                notCollision = false;
+            }
+        });
+        return notCollision;
+    }
+
+    enemyCheck() {
+        return true;
+    }
+
+    renderPlayer(x, y) {
+        this.playerElement.style.left = x * 5 + '%';
+        this.playerElement.style.top = y * 5 + '%';
+    }
+
     moveRight() {
-        if (this.x < 19) {
+        this.handleLifeDown();
+        const newPosition = {
+            x: this.x+1,
+            y: this.y
+        }
+
+        if (this.x < 19 && this.wallsCheck(newPosition) && this.enemyCheck()) {
             this.x++;
-            this.playerElement.style.left = this.x * 5 + '%';
-            console.log('move right')
+            this.renderPlayer(this.x, this.y);
         }
     }
     moveLeft() {
-        if (this.x > 0) {
+        const newPosition = {
+            x: this.x-1,
+            y: this.y
+        }
+        if (this.x > 0 && this.wallsCheck(newPosition) && this.enemyCheck()) {
             this.x--;
-            this.playerElement.style.left = this.x * 5 + '%';
-            console.log('move left');
+            this.renderPlayer(this.x, this.y);
         }
     }
     moveUp() {
-        if (this.y > 0) {
+        const newPosition = {
+            x: this.x,
+            y: this.y-1
+        }
+        if (this.y > 0 && this.wallsCheck(newPosition) && this.enemyCheck()) {
             this.y--;
-            this.playerElement.style.top = this.y * 5 + '%';
-            console.log('move up');
+            this.renderPlayer(this.x, this.y);
         }
     }
     moveDown() {
-        if (this.y < 19) {
+        const newPosition = {
+            x: this.x,
+            y: this.y+1
+        }
+        if (this.y < 19 && this.wallsCheck(newPosition) && this.enemyCheck()) {
             this.y++;
-            this.playerElement.style.top = this.y * 5 + '%';
-            console.log('move down');
+            this.renderPlayer(this.x, this.y);
         }
     }
     registerEvents() {
@@ -54,6 +92,3 @@ class Player {
         });
     }
 }
-
-
-const newPlayer = new Player();
