@@ -1,5 +1,6 @@
 class Player {
-    constructor(walls, enemies) {
+    constructor(walls, lifeDown) {
+        this.handleLifeDown = lifeDown;
         this.playerElement = document.querySelector('.gamer');
         this.x = 0;
         this.y = 0;
@@ -29,6 +30,7 @@ class Player {
     }
 
     moveRight() {
+        this.handleLifeDown();
         const newPosition = {
             x: this.x+1,
             y: this.y
@@ -37,7 +39,6 @@ class Player {
         if (this.x < 19 && this.wallsCheck(newPosition) && this.enemyCheck()) {
             this.x++;
             this.renderPlayer(this.x, this.y);
-            console.log('move right')
         }
     }
     moveLeft() {
@@ -48,7 +49,6 @@ class Player {
         if (this.x > 0 && this.wallsCheck(newPosition) && this.enemyCheck()) {
             this.x--;
             this.renderPlayer(this.x, this.y);
-            console.log('move left');
         }
     }
     moveUp() {
@@ -59,7 +59,6 @@ class Player {
         if (this.y > 0 && this.wallsCheck(newPosition) && this.enemyCheck()) {
             this.y--;
             this.renderPlayer(this.x, this.y);
-            console.log('move up');
         }
     }
     moveDown() {
@@ -70,7 +69,6 @@ class Player {
         if (this.y < 19 && this.wallsCheck(newPosition) && this.enemyCheck()) {
             this.y++;
             this.renderPlayer(this.x, this.y);
-            console.log('move down');
         }
     }
     registerEvents() {

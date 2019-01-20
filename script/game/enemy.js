@@ -10,28 +10,24 @@ class Enemy {
         if (this.x < 19) {
             this.x++;
             this.enemyElement.style.left = this.x * 5 + '%';
-            console.log('move right')
         }
     }
     moveLeft() {
         if (this.x > 0) {
             this.x--;
             this.enemyElement.style.left = this.x * 5 + '%';
-            console.log('move left');
         }
     }
     moveUp() {
         if (this.y > 0) {
             this.y--;
             this.enemyElement.style.top = this.y * 5 + '%';
-            console.log('move up');
         }
     }
     moveDown() {
         if (this.y < 19) {
             this.y++;
             this.enemyElement.style.top = this.y * 5 + '%';
-            console.log('move down');
         }
     }
     moveSlantRightUp() {
@@ -40,7 +36,6 @@ class Enemy {
             this.x++;
             this.enemyElement.style.top = this.y * 5 + '%';
             this.enemyElement.style.left = this.x * 5 + '%';
-            console.log('rightUp');
         }
     }
     moveSlantRightDown() {
@@ -49,7 +44,6 @@ class Enemy {
             this.x++;
             this.enemyElement.style.top = this.y * 5 + '%';
             this.enemyElement.style.left = this.x * 5 + '%';
-            console.log('rightDown')
         }
     }
     moveSlantLeftUp() {
@@ -58,7 +52,6 @@ class Enemy {
             this.x--;
             this.enemyElement.style.top = this.y * 5 + '%';
             this.enemyElement.style.left = this.x * 5 + '%';
-            console.log('leftUp')
         }
     }
     moveSlantLeftDown() {
@@ -67,7 +60,6 @@ class Enemy {
             this.x--;
             this.enemyElement.style.top = this.y * 5 + '%';
             this.enemyElement.style.left = this.x * 5 + '%';
-            console.log('leftDown');
         }
     }
     randomMoves() {
@@ -105,7 +97,3 @@ class Enemy {
 
 
 }
-
-
-const newEnemy = new Enemy();
-//newEnemy.randomMoves();
