@@ -78,6 +78,7 @@ function reset() {
     hours = 0;
     document.getElementById("display").innerHTML = "00:00:00";
     document.getElementById("startStop").innerHTML = "";
+    game.reset();
 
     startStopButton.classList = 'fas fa-play-circle';
 }

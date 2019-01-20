@@ -9,6 +9,12 @@ class Game{
     pause(){
         console.log('game paused');
     }
+    reset(){
+        console.log('game reset')
+    }
+    end(){
+        console.log('game over')
+    }
 }
 
 const game = new Game();
