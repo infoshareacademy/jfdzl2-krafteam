@@ -17,7 +17,12 @@ class Walls {
     }
 
     renderWalls() {
-        //petla
+        //petla z createElements, div
+        //dodac klase
+        //dodac style
+        //appendChild
+        
+        //this.elements.forEach() {} ?
     }
 
 
