@@ -130,7 +130,8 @@ body {
 
 .enemy {
     color: rgba(124, 65, 65, 0.966);
-    
+    position: absolute;
+    transition: 0.3s;
 }
 
 .gamer {
