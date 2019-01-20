@@ -5,10 +5,18 @@ class Player {
         this.y = 0;
         this.registerEvents();
         this.renderPlayer(this.x, this.y);
+        this.walls = walls;
     }
 
-    wallsCheck() {
-        return true;
+    wallsCheck(newPosition) {
+        let notCollision = true;
+        this.walls.forEach(e => {
+            console.log('wall:', e);
+            if(newPosition.x === e.x && newPosition.y === e.y) {
+                notCollision = false;
+            }
+        });
+        return notCollision;
     }
 
     enemyCheck() {
@@ -21,28 +29,45 @@ class Player {
     }
 
     moveRight() {
-        if (this.x < 19 && this.wallsCheck() && this.enemyCheck()) {
+        const newPosition = {
+            x: this.x+1,
+            y: this.y
+        }
+
+        if (this.x < 19 && this.wallsCheck(newPosition) && this.enemyCheck()) {
             this.x++;
             this.renderPlayer(this.x, this.y);
             console.log('move right')
         }
     }
     moveLeft() {
-        if (this.x > 0 && this.wallsCheck() && this.enemyCheck()) {
+        const newPosition = {
+            x: this.x-1,
+            y: this.y
+        }
+        if (this.x > 0 && this.wallsCheck(newPosition) && this.enemyCheck()) {
             this.x--;
             this.renderPlayer(this.x, this.y);
             console.log('move left');
         }
     }
     moveUp() {
-        if (this.y > 0 && this.wallsCheck() && this.enemyCheck()) {
+        const newPosition = {
+            x: this.x,
+            y: this.y-1
+        }
+        if (this.y > 0 && this.wallsCheck(newPosition) && this.enemyCheck()) {
             this.y--;
             this.renderPlayer(this.x, this.y);
             console.log('move up');
         }
     }
     moveDown() {
-        if (this.y < 19 && this.wallsCheck() && this.enemyCheck()) {
+        const newPosition = {
+            x: this.x,
+            y: this.y+1
+        }
+        if (this.y < 19 && this.wallsCheck(newPosition) && this.enemyCheck()) {
             this.y++;
             this.renderPlayer(this.x, this.y);
             console.log('move down');
