@@ -2,6 +2,7 @@ class Game{
     constructor (){
         this.points = 0;
         this.lifes = 3;
+        this.player = new Player();
     }
     start(){
         console.log('game started');
