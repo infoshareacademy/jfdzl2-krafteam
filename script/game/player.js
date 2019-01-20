@@ -1,5 +1,5 @@
 class Player {
-    constructor() {
+    constructor(walls) {
         this.playerElement = document.querySelector('.gamer');
         this.x = 0;
         this.y = 0;
