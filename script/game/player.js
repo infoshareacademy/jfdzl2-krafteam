@@ -1,5 +1,5 @@
 class Player {
-    constructor(walls, lifeDown, enemies, enemy) {
+    constructor(walls, lifeDown, enemy) {
         this.handleLifeDown = lifeDown;
         this.playerElement = document.querySelector('.gamer');
         this.x = 0;
@@ -7,7 +7,7 @@ class Player {
         this.registerEvents();
         this.renderPlayer(this.x, this.y);
         this.walls = walls;
-        this.enemies = enemies;
+        // this.enemies = enemies;
         this.enemy = enemy;
     }
 
@@ -18,12 +18,12 @@ class Player {
                 notCollision = false;
             }
         });
-        this.enemies.forEach(e => {
-            if(newPosition.x === e.x && newPosition.y === e.y) {
-                notCollision = false;
-                this.handleLifeDown();
-            }
-        })
+        // this.enemies.forEach(e => {
+        //     if(newPosition.x === e.x && newPosition.y === e.y) {
+        //         notCollision = false;
+        //         this.handleLifeDown();
+        //     }
+        // })
         if(newPosition.x === this.enemy.x && newPosition.y === this.enemy.y) {
             notCollision = false;
             this.handleLifeDown();
