@@ -1,5 +1,5 @@
 class Player {
-    constructor(walls, lifeDown) {
+    constructor(walls, lifeDown, enemies) {
         this.handleLifeDown = lifeDown;
         this.playerElement = document.querySelector('.gamer');
         this.x = 0;
@@ -7,21 +7,23 @@ class Player {
         this.registerEvents();
         this.renderPlayer(this.x, this.y);
         this.walls = walls;
+        this.enemies = enemies;
     }
 
-    wallsCheck(newPosition) {
+    collisionCheck(newPosition) {
         let notCollision = true;
         this.walls.forEach(e => {
-            console.log('wall:', e);
             if(newPosition.x === e.x && newPosition.y === e.y) {
                 notCollision = false;
             }
         });
+        this.enemies.forEach(e => {
+            if(newPosition.x === e.x && newPosition.y === e.y) {
+                notCollision = false;
+                this.handleLifeDown();
+            }
+        })
         return notCollision;
-    }
-
-    enemyCheck() {
-        return true;
     }
 
     renderPlayer(x, y) {
@@ -30,13 +32,12 @@ class Player {
     }
 
     moveRight() {
-        this.handleLifeDown();
         const newPosition = {
             x: this.x+1,
             y: this.y
         }
 
-        if (this.x < 19 && this.wallsCheck(newPosition) && this.enemyCheck()) {
+        if (this.x < 19 && this.collisionCheck(newPosition)) {
             this.x++;
             this.renderPlayer(this.x, this.y);
         }
@@ -46,7 +47,7 @@ class Player {
             x: this.x-1,
             y: this.y
         }
-        if (this.x > 0 && this.wallsCheck(newPosition) && this.enemyCheck()) {
+        if (this.x > 0 && this.collisionCheck(newPosition)) {
             this.x--;
             this.renderPlayer(this.x, this.y);
         }
@@ -56,7 +57,7 @@ class Player {
             x: this.x,
             y: this.y-1
         }
-        if (this.y > 0 && this.wallsCheck(newPosition) && this.enemyCheck()) {
+        if (this.y > 0 && this.collisionCheck(newPosition)) {
             this.y--;
             this.renderPlayer(this.x, this.y);
         }
@@ -66,7 +67,7 @@ class Player {
             x: this.x,
             y: this.y+1
         }
-        if (this.y < 19 && this.wallsCheck(newPosition) && this.enemyCheck()) {
+        if (this.y < 19 && this.collisionCheck(newPosition)) {
             this.y++;
             this.renderPlayer(this.x, this.y);
         }

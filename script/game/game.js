@@ -13,8 +13,12 @@ class Game{
             {x: 16, y: 3},
             {x: 4, y: 3},
             {x: 2, y: 9},
-        ]
-        this.player = new Player(this.walls, this.lifeDown.bind(this));
+        ];
+        this.enemies = [
+            {x: 2, y: 2},
+            {x: 6, y: 7},
+        ];
+        this.player = new Player(this.walls, this.lifeDown.bind(this), this.enemies);
         this.enemy = new Enemy();
     }
     lifeDown(){
