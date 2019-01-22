@@ -12,9 +12,9 @@ class Player {
     wallsCheck(newPosition) {
         let notCollision = true;
         this.walls.forEach(e => {
-            console.log('wall:', e);
-            if(newPosition.x === e.x && newPosition.y === e.y) {
+            if (newPosition.x === e.x && newPosition.y === e.y) {
                 notCollision = false;
+                console.log('wall:', e);
             }
         });
         return notCollision;
@@ -32,7 +32,7 @@ class Player {
     moveRight() {
         this.handleLifeDown();
         const newPosition = {
-            x: this.x+1,
+            x: this.x + 1,
             y: this.y
         }
 
@@ -43,7 +43,7 @@ class Player {
     }
     moveLeft() {
         const newPosition = {
-            x: this.x-1,
+            x: this.x - 1,
             y: this.y
         }
         if (this.x > 0 && this.wallsCheck(newPosition) && this.enemyCheck()) {
@@ -54,7 +54,7 @@ class Player {
     moveUp() {
         const newPosition = {
             x: this.x,
-            y: this.y-1
+            y: this.y - 1
         }
         if (this.y > 0 && this.wallsCheck(newPosition) && this.enemyCheck()) {
             this.y--;
@@ -64,7 +64,7 @@ class Player {
     moveDown() {
         const newPosition = {
             x: this.x,
-            y: this.y+1
+            y: this.y + 1
         }
         if (this.y < 19 && this.wallsCheck(newPosition) && this.enemyCheck()) {
             this.y++;
