@@ -37,7 +37,7 @@ class Game {
         console.log('game reset')
     }
     end() {
-        console.log('game over')
+        console.warn('game over')
     }
 }
 
