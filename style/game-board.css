@@ -32,11 +32,13 @@ body {
     .game-container {
         width: 98%;
         height: 60%;
-        font-size: 62.5%;
+    
     }
 
    
 }
+
+/* Game-navbar */
 
 .game-bar {
     display: flex;
@@ -45,47 +47,84 @@ body {
     flex-direction: row;
 }
 
+.score-container{
+    display: flex;
+    width: 25%;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 3%;
+
+}
+.score{
+    color: #eee;
+    margin: 3%;
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: bold;
+    padding-top: 1%;
+
+}
+
+.counter{
+    color: #eee;
+    margin: 3%;
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: bold;
+    padding-top: 1%;
+
+
+  
+}
+
+/* timer */
+
 .timer-container {
     display: flex;
     justify-content: center;
-    padding: 15px;
+    padding-top: 3%;
+    padding-bottom: 3%;
     width: 50%;
 
 }
 
 .timer-display {
-    font-size: 20px;
-    margin: 2px 8px;
     color: #eee;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Luckiest Guy', cursive;
     font-weight: bold;
+    margin: 2%;
 }
 
 .buttons {
-    
-    display: inline-block;
-    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    justify-content: center;
+}
+
+.timer-element{
+    width: 30%;
+    height: 30%;
+    margin: 8%;
 }
 
 
 .fa-play-circle {
     background-color: #ecd06c;
-    padding: 5px;
+    padding: 15%;
     border-radius: 5px;
     color: #333;
 }
 
 .fa-power-off {
     background-color: #ecd06c;
-    padding: 5px;
+    padding: 15%;
     border-radius: 5px;
 }
 
 .fa-play-circle,
 .fa-pause-circle{
     background-color: #ecd06c;
-    padding: 5px;
-    border-radius: 10px;
+    padding: 15%;
+    border-radius: 5px;
     color: #333;
 }
 
@@ -98,21 +137,22 @@ body {
 }
 
 /* life-icon */
+
 .life-container{
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 25%;
     justify-content: flex-end;
-    padding: 2%;
+    padding: 3%;
     
 
 }
 
 .life-icon{
     color: #b30000;
-    width: 10%;
-    height: 10%;
-    margin: 2%;
+    width: 20%;
+    height: 20%;
+    margin: 3%;
 
 }
 
