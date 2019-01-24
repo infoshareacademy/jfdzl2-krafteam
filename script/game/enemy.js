@@ -1,65 +1,114 @@
 class Enemy {
-    constructor(enemy) {
+    constructor(player, lifeDown, walls) {
         this.enemyElement = document.querySelector('.enemy');
+        this.handleLifeDown = lifeDown;
         this.x = 0;
         this.y = 0;
+        this.walls = walls;
+        this.player = player;
+        this.renderEnemy(this.x, this.y);
         this.randomMoves();
         setInterval(this.randomMoves.bind(this), 1000);
     }
+    renderEnemy(x, y) {
+        this.enemyElement.style.left = x * 5 + '%';
+        this.enemyElement.style.top = y * 5 + '%';
+    }
+    collisionCheck(newPosition) {
+        let notCollision = true;
+        this.walls.forEach(e => {
+            if(newPosition.x === e.x && newPosition.y === e.y) {
+                notCollision = false;
+            }
+        });
+        if(newPosition.x === this.player.x && newPosition.y === this.player.y) {
+            notCollision = false;
+            this.handleLifeDown();
+        }
+        return notCollision;
+    }
     moveRight() {
-        if (this.x < 19) {
+        const newPosition = {
+            x: this.x+1,
+            y: this.y
+        }
+        if (this.x < 19 && this.collisionCheck(newPosition)) {
             this.x++;
-            this.enemyElement.style.left = this.x * 5 + '%';
+            this.renderEnemy(this.x, this.y);
         }
     }
     moveLeft() {
-        if (this.x > 0) {
+        const newPosition = {
+            x: this.x-1,
+            y: this.y
+        }
+        if (this.x > 0 && this.collisionCheck(newPosition)) {
             this.x--;
-            this.enemyElement.style.left = this.x * 5 + '%';
+            this.renderEnemy(this.x, this.y);
         }
     }
     moveUp() {
-        if (this.y > 0) {
+        const newPosition = {
+            x: this.x,
+            y: this.y-1
+        }
+        if (this.y > 0 && this.collisionCheck(newPosition)) {
             this.y--;
-            this.enemyElement.style.top = this.y * 5 + '%';
+            this.renderEnemy(this.x, this.y);
         }
     }
     moveDown() {
-        if (this.y < 19) {
+        const newPosition = {
+            x: this.x,
+            y: this.y+1
+        }
+        if (this.y < 19 && this.collisionCheck(newPosition)) {
             this.y++;
-            this.enemyElement.style.top = this.y * 5 + '%';
+            this.renderEnemy(this.x, this.y);
         }
     }
     moveSlantRightUp() {
-        if (this.y > 0 && this.x < 19) {
+        const newPosition = {
+            x: this.x+1,
+            y: this.y-1
+        }
+        if (this.y > 0 && this.x < 19 && this.collisionCheck(newPosition)) {
             this.y--;
             this.x++;
-            this.enemyElement.style.top = this.y * 5 + '%';
-            this.enemyElement.style.left = this.x * 5 + '%';
+            this.renderEnemy(this.x, this.y);
         }
     }
     moveSlantRightDown() {
-        if (this.y < 19 && this.x < 19) {
+        const newPosition = {
+            x: this.x+1,
+            y: this.y+1
+        }
+        if (this.y < 19 && this.x < 19 && this.collisionCheck(newPosition)) {
             this.y++;
             this.x++;
-            this.enemyElement.style.top = this.y * 5 + '%';
-            this.enemyElement.style.left = this.x * 5 + '%';
+            this.renderEnemy(this.x, this.y);
         }
     }
     moveSlantLeftUp() {
-        if (this.y > 0 && this.x > 0) {
+        const newPosition = {
+            x: this.x-1,
+            y: this.y-1
+        }
+        if (this.y > 0 && this.x > 0 && this.collisionCheck(newPosition)) {
             this.y--;
             this.x--;
-            this.enemyElement.style.top = this.y * 5 + '%';
-            this.enemyElement.style.left = this.x * 5 + '%';
+            this.renderEnemy(this.x, this.y);
         }
     }
     moveSlantLeftDown() {
-        if (this.y < 19 && this.x > 0) {
+        const newPosition = {
+            x: this.x-1,
+            y: this.y+1
+        }
+        if (this.y < 19 && this.x > 0 && this.collisionCheck(newPosition)) {
             this.y++;
             this.x--;
-            this.enemyElement.style.top = this.y * 5 + '%';
-            this.enemyElement.style.left = this.x * 5 + '%';
+            this.renderEnemy(this.x, this.y);
         }
     }
     randomMoves() {

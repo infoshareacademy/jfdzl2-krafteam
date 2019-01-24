@@ -18,8 +18,8 @@ class Game{
         //     {x: 2, y: 2},
         //     {x: 6, y: 7},
         // ];
-        this.enemy = new Enemy();
         this.player = new Player(this.walls, this.lifeDown.bind(this), this.enemy);
+        this.enemy = new Enemy(this.player, this.lifeDown.bind(this), this.walls);
     }
     lifeDown(){
         this.lives--;

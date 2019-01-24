@@ -4,11 +4,11 @@ class Player {
         this.playerElement = document.querySelector('.gamer');
         this.x = 0;
         this.y = 0;
-        this.registerEvents();
-        this.renderPlayer(this.x, this.y);
         this.walls = walls;
         // this.enemies = enemies;
         this.enemy = enemy;
+        this.registerEvents();
+        this.renderPlayer(this.x, this.y);
     }
 
     collisionCheck(newPosition) {
