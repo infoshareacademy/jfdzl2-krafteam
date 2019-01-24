@@ -155,6 +155,13 @@ body {
     margin: 3%;
 
 }
+.life-icon-lost{
+    color: #b3000080;
+    width: 20%;
+    height: 20%;
+    margin: 3%;
+
+}
 
 .game-board {
     height: 90%;
