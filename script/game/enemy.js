@@ -1,10 +1,23 @@
 class Enemy {
     constructor(enemy) {
+        this.enemyArray = [];
         this.enemyElement = document.querySelector('.enemy');
         this.x = 0;
         this.y = 0;
         this.randomMoves();
         setInterval(this.randomMoves.bind(this), 1000);
+        this.renderNewEnemy();
+    }
+    renderNewEnemy() {
+        let player = document.querySelector('.gamer')
+        player.addEventListener('click', () => {
+            let cloneEnemy = Object.assign({}, newEnemy);
+            this.enemyArray.push(cloneEnemy)
+            console.log(cloneEnemy)
+            console.log(this.enemyArray)
+            let gameBoard = document.querySelector('.game-board')
+            gameBoard.innerHtml = cloneEnemy;
+        });
     }
     moveRight() {
         if (this.x < 19) {
@@ -97,3 +110,17 @@ class Enemy {
 
 
 }
+
+
+const newEnemy = new Enemy();
+console.log(newEnemy)
+
+
+
+
+
+
+
+
+
+
