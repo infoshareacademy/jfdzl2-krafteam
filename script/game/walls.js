@@ -1,48 +1,33 @@
 class Walls {
     constructor(){
-        //this.wallElement = document.querySelector('.wall')
-        this.wallElements = []
+        this.walls = []
+        this.numberOfWalls = 40;
+        this.gameBoardContainer =  document.querySelector('.game-board');
     }
 
     generate() {
-        for (let i = 0; i < 40; i++) {
-            // tworzy obiekt (parametry x, y, w ktorych jest funkcja math.random)
-            // this.wallElements[i] = {
-            //     x: Math.round(Math.random() * 19),
-            //     y: Math.round(Math.random() * 19),
-            // }
-            this.wallElements.push({
+        for (let i = 0; i < this.numberOfWalls; i++) {            
+            this.walls.push({
                 x: Math.round(Math.random() * 19),
                 y: Math.round(Math.random() * 19),
-            })
-
-            //console.log(this.elements[i])
+            });
         }
-        console.log(this.wallElements)
+        this.renderWalls();
     }
 
-    renderWalls() {
-        //petla z createElements, div
-        //dodac klase
-        //dodac style
-        //appendChild
+    renderWalls() {    
+        this.walls.forEach((wall) => {
+            let wallDiv = document.createElement('div')
 
-        //this.elements.forEach() {} ?
+            wallDiv.classList = 'wall game-element'
+            wallDiv.style.top = wall.y * 5 +'%'
+            wallDiv.style.left = wall.x * 5 +'%'
 
-        for (let i = 0; i < 40; i++) {
-            this.wallElements[i] = document.querySelector('.game-board')
-            let wall = this.wallElements[i].document.createElement('div')
-
-            wall.classList = 'wall game-element'
-            wall.style.top = this.y * 5 +'%'
-            wall.style.left = this.x * 5 +'%'
-
-        }
+            this.gameBoardContainer.appendChild(wallDiv);
+        })
     }
-
 
 }
 
 const walls = new Walls();
 walls.generate()
-//walls.renderWalls()
