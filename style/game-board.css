@@ -102,7 +102,7 @@ body {
 
 .timer-element{
     width: 30%;
-    /* height: 30%; */
+    height: 30%;
     margin: 8%;
 }
 
@@ -226,6 +226,11 @@ body {
     width: 50%;
     
 }
+.end-game-body{
+    margin: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
 
 .kraft-man{
     color: #fed136;
@@ -235,14 +240,10 @@ body {
     justify-content: center;
 }
 
-.end-game-body{
-    margin: 3%;
-}
-
 .dead-kraft-man{
     color: #fed136;
     width: 20%;
-    /* height: 20%; */
+    
 
 }
 
@@ -250,10 +251,20 @@ body {
     display: flex;
     justify-content: center;
 }
+@keyframes example {
+    0%   {color:#eee;}
+    25%  {color:#fed136; }
+    50%  {color:#eee; }
+    75%  {color:#fed136; }
+    100% {color:#eee;}
+  }
  .game-over{
     color: #eee;
     font-family: 'Luckiest Guy', cursive;
     font-size: 40px;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
  }
 .poo-container{
     display: flex;
@@ -316,6 +327,9 @@ body {
      border-color: #fed136;
      font-family: 'Montserrat', sans-serif;
      font-weight: bold;
+     width: 35%;
+     text-align: center;
+
  }
 
  .end-game-btn:hover{
@@ -324,4 +338,12 @@ body {
      background-color: #fed136;
      color: #212529;
      font-weight: bold;
+ }
+
+ .end-game-btn a{
+     color: #fed136;
+ }
+ .end-game-btn:hover a:hover{
+    background-color: #fed136;
+    color: #212529;
  }
