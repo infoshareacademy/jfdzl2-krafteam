@@ -180,9 +180,8 @@ body {
 }
 
 .wall {
-
+    position: absolute;
     background-color: black;
-
 }
 
 .food {
