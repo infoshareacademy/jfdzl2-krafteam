@@ -16,9 +16,11 @@ class Game {
         ]
         this.player = new Player(this.walls, this.lifeDown.bind(this));
         this.enemy = new Enemy();
+        this.gameOver = false;
     }
     lifeDown() {
         // console.log('life down')
+        this.scoreUp()
         this.heartBreak()
         this.lives--;
         if (this.lives === 0) {
@@ -32,7 +34,42 @@ class Game {
         heart.innerHTML = broken;
 
     }
+    // it works :) 
+    // scoreUp() {
+    //     let counter = document.querySelector('.counter')
+    //     this.points++;
+    //     if (this.points > 99) {
+    //         counter.innerText = this.points;
+    //     } if (this.points > 9) {
+    //         counter.innerText = '0' + this.points;
+    //     }
+    //     counter.innerText = '00' + this.points;
+    //     console.log('score up')
+    // }
+
+    // it works too :) 
+    // scoreUp() {
+    //     let counter = document.querySelector('.counter')
+    //     this.points++;
+    //     if (this.points < 10) {
+    //         counter.innerText = '00' + this.points;
+    //         return
+    //     } if (this.points < 100) {
+    //         counter.innerText = '0' + this.points;
+    //         return
+    //     }
+    //     counter.innerText = this.points;
+    //     console.log('score up')
+    // }
     scoreUp() {
+        let counter = document.querySelector('.counter')
+        this.points++;
+        if (this.points > 9) {
+            if (this.points > 99) {
+                counter.innerText = this.points;
+            } counter.innerText = '0' + this.points;
+            return
+        } counter.innerText = '00' + this.points;
         console.log('score up')
     }
     start() {
@@ -46,6 +83,8 @@ class Game {
     }
     end() {
         console.warn('game over')
+        clearInterval(setInterval());
+        this.gameOver = true
     }
 }
 
