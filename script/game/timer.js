@@ -56,13 +56,14 @@ function startStop() {
         interval = window.setInterval(stopWatch, 1000);
         document.getElementById("startStop").innerHTML = "";
         status = "started";
-
+        game.start();
         startStopButton.classList = 'fas fa-pause-circle';
     } else {
 
         window.clearInterval(interval);
         document.getElementById("startStop").innerHTML = "";
         status = "stopped";
+        game.pause();
 
         startStopButton.classList = 'fas fa-play-circle';
     }
@@ -77,6 +78,8 @@ function reset() {
     hours = 0;
     document.getElementById("display").innerHTML = "00:00:00";
     document.getElementById("startStop").innerHTML = "";
+    status = "stopped";
+    game.reset();
 
     startStopButton.classList = 'fas fa-play-circle';
 }
