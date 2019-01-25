@@ -1,12 +1,12 @@
 class Walls {
     constructor(){
         this.walls = []
-        this.numberOfWalls = 40;
+        this.numberOfWalls = 80;
         this.gameBoardContainer =  document.querySelector('.game-board');
     }
 
     generate() {
-        for (let i = 0; i < this.numberOfWalls; i++) {            
+        for (let i = 0; i < this.numberOfWalls; i++) {
             this.walls.push({
                 x: Math.round(Math.random() * 19),
                 y: Math.round(Math.random() * 19),
@@ -15,7 +15,7 @@ class Walls {
         this.renderWalls();
     }
 
-    renderWalls() {    
+    renderWalls() {
         this.walls.forEach((wall) => {
             let wallDiv = document.createElement('div')
 
@@ -26,7 +26,6 @@ class Walls {
             this.gameBoardContainer.appendChild(wallDiv);
         })
     }
-
 }
 
 const walls = new Walls();
