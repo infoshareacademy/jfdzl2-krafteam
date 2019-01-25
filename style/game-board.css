@@ -32,10 +32,10 @@ body {
     .game-container {
         width: 98%;
         height: 60%;
-    
+
     }
 
-   
+
 }
 
 /* Game-navbar */
@@ -47,7 +47,7 @@ body {
     flex-direction: row;
 }
 
-.score-container{
+.score-container {
     display: flex;
     width: 25%;
     flex-direction: row;
@@ -55,7 +55,8 @@ body {
     padding: 3%;
 
 }
-.score{
+
+.score {
     color: #eee;
     margin: 3%;
     font-family: 'Luckiest Guy', cursive;
@@ -64,7 +65,7 @@ body {
 
 }
 
-.counter{
+.counter {
     color: #eee;
     margin: 3%;
     font-family: 'Luckiest Guy', cursive;
@@ -72,7 +73,7 @@ body {
     padding-top: 1%;
 
 
-  
+
 }
 
 /* timer */
@@ -100,9 +101,9 @@ body {
     justify-content: center;
 }
 
-.timer-element{
+.timer-element {
     width: 30%;
-    height: 30%;
+    /* height: 30%; */
     margin: 8%;
 }
 
@@ -121,7 +122,7 @@ body {
 }
 
 .fa-play-circle,
-.fa-pause-circle{
+.fa-pause-circle {
     background-color: #ecd06c;
     padding: 15%;
     border-radius: 5px;
@@ -129,33 +130,34 @@ body {
 }
 
 .fa-play-circle:hover {
-    background-color: rgb(240, 68, 68);
+    background-color: #b30000;
 }
 
 .fa-power-off:hover {
-    background-color: rgb(240, 68, 68);
+    background-color: #b30000;
 }
 
 /* life-icon */
 
-.life-container{
+.life-container {
     display: flex;
     flex-direction: row;
     width: 25%;
     justify-content: flex-end;
     padding: 3%;
-    
+
 
 }
 
-.life-icon{
+.life-icon {
     color: #b30000;
     width: 20%;
     height: 20%;
     margin: 3%;
 
 }
-.life-icon-lost{
+
+.life-icon-lost {
     color: #b3000080;
     width: 20%;
     height: 20%;
@@ -200,5 +202,5 @@ body {
     position: absolute;
     transition: 0.3s;
     color: rgb(243, 197, 141);
-    
+
 }
