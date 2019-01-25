@@ -96,7 +96,3 @@ const game = new Game();
 
 
 
-window.addEventListener('click', function(){
-    const modal = document.querySelector('.modal');
-        modal.style.display = "block";
-});
