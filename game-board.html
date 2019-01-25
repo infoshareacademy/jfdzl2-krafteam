@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Bangers|Luckiest+Guy|VT323" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" media="screen" href="style/game-board.css" />
 
@@ -24,7 +26,7 @@
             <div class="game-bar">
                 <div class="score-container">
                     <div class="score">Punkty:</div>
-                    <div class="counter">00</div>
+                    <div class="counter">000</div>
                 </div>
                 <div class="timer-container">
                     <div id="display" class="timer-display">
@@ -68,14 +70,15 @@
 
             <div class="container-game-board">
                 <div class="game-board">
-                    <div class="wall game-element"></div>
+                    <!-- <div class="wall game-element"></div> -->
                     <div class=" gamer game-element">
                         <svg aria-hidden="true" data-prefix="fas" data-icon="grin-beam" class="svg-inline--fa fa-grin-beam fa-w-16"
                             role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
                             <path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm80 144c23.8 0 52.7 29.3 56 71.4.7 8.6-10.8 11.9-14.9 4.5l-9.5-17c-7.7-13.7-19.2-21.6-31.5-21.6s-23.8 7.9-31.5 21.6l-9.5 17c-4.1 7.3-15.6 4-14.9-4.5 3.1-42.1 32-71.4 55.8-71.4zm-160 0c23.8 0 52.7 29.3 56 71.4.7 8.6-10.8 11.9-14.9 4.5l-9.5-17c-7.7-13.7-19.2-21.6-31.5-21.6s-23.8 7.9-31.5 21.6l-9.5 17c-4.2 7.4-15.6 4-14.9-4.5 3.1-42.1 32-71.4 55.8-71.4zm80 280c-60.6 0-134.5-38.3-143.8-93.3-2-11.9 9.4-21.6 20.7-17.9C155.1 330.5 200 336 248 336s92.9-5.5 123.1-15.2c11.4-3.7 22.6 6.1 20.7 17.9-9.3 55-83.2 93.3-143.8 93.3z"></path>
                         </svg>
+
                     </div>
-                   
+
                     <div class="food game-element">
                         <svg aria-hidden="true" data-prefix="fas" data-icon="beer" class="svg-inline--fa fa-beer fa-w-14"
                             role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -85,10 +88,73 @@
                 </div>
             </div>
         </div>
+
+        <!-- modal - Game Over -->
+
+        <div class="modal">
+            <div class="end-game-modal">
+                <header class="kraft-man">
+                    <p>Kraft-Man</p>
+                </header>
+                <main>
+                    <div class="end-game-body">
+                        <div class="kraft-man-container">
+                            <div class="dead-kraft-man">
+                                <svg aria-hidden="true" data-prefix="fas" data-icon="grin-beam-sweat" class="svg-inline--fa fa-grin-beam-sweat fa-w-16"
+                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 504 512">
+                                    <path fill="currentColor" d="M456 128c26.5 0 48-21 48-47 0-20-28.5-60.4-41.6-77.8-3.2-4.3-9.6-4.3-12.8 0C436.5 20.6 408 61 408 81c0 26 21.5 47 48 47zm0 32c-44.1 0-80-35.4-80-79 0-4.4.3-14.2 8.1-32.2C345 23.1 298.3 8 248 8 111 8 0 119 0 256s111 248 248 248 248-111 248-248c0-35.1-7.4-68.4-20.5-98.6-6.3 1.5-12.7 2.6-19.5 2.6zm-128-8c23.8 0 52.7 29.3 56 71.4.7 8.6-10.8 12-14.9 4.5l-9.5-17c-7.7-13.7-19.2-21.6-31.5-21.6s-23.8 7.9-31.5 21.6l-9.5 17c-4.1 7.4-15.6 4-14.9-4.5 3.1-42.1 32-71.4 55.8-71.4zm-160 0c23.8 0 52.7 29.3 56 71.4.7 8.6-10.8 12-14.9 4.5l-9.5-17c-7.7-13.7-19.2-21.6-31.5-21.6s-23.8 7.9-31.5 21.6l-9.5 17c-4.2 7.4-15.6 4-14.9-4.5 3.1-42.1 32-71.4 55.8-71.4zm80 280c-60.6 0-134.5-38.3-143.8-93.3-2-11.8 9.3-21.6 20.7-17.9C155.1 330.5 200 336 248 336s92.9-5.5 123.1-15.2c11.5-3.7 22.6 6.2 20.7 17.9-9.3 55-83.2 93.3-143.8 93.3z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="main-game-over-container">
+                            <div class=" game-over">
+                                <p>Game<br />Over</p>
+                            </div>
+                        </div>
+                        <div class="poo-container">
+                            <div class="happy-poo">
+                                <svg aria-hidden="true" data-prefix="fas" data-icon="poo" class="svg-inline--fa fa-poo fa-w-16"
+                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path fill="currentColor" d="M451.4 369.1C468.7 356 480 335.4 480 312c0-39.8-32.2-72-72-72h-14.1c13.4-11.7 22.1-28.8 22.1-48 0-35.3-28.7-64-64-64h-5.9c3.6-10.1 5.9-20.7 5.9-32 0-53-43-96-96-96-5.2 0-10.2.7-15.1 1.5C250.3 14.6 256 30.6 256 48c0 44.2-35.8 80-80 80h-16c-35.3 0-64 28.7-64 64 0 19.2 8.7 36.3 22.1 48H104c-39.8 0-72 32.2-72 72 0 23.4 11.3 44 28.6 57.1C26.3 374.6 0 404.1 0 440c0 39.8 32.2 72 72 72h368c39.8 0 72-32.2 72-72 0-35.9-26.3-65.4-60.6-70.9zM192 256c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm159.5 139C341 422.9 293 448 256 448s-85-25.1-95.5-53c-2-5.3 2-11 7.8-11h175.4c5.8 0 9.8 5.7 7.8 11zM320 320c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer class="end-game-footer">
+                    <div class="end-game-footer-score">
+                        <div class="score-info">
+                            <div class= "score-info-element">MASZ: </div>
+                            <div class="beer-points score-info-element"> 0</div>
+                        </div>
+                        <div class="beer-icon-points">
+                            <svg aria-hidden="true" data-prefix="fas" data-icon="beer" class="svg-inline--fa fa-beer fa-w-14"
+                                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor" d="M368 96h-48V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56v400c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24v-42.11l80.606-35.977C429.396 365.063 448 336.388 448 304.86V176c0-44.112-35.888-80-80-80zm16 208.86a16.018 16.018 0 0 1-9.479 14.611L320 343.805V160h48c8.822 0 16 7.178 16 16v128.86zM208 384c-8.836 0-16-7.164-16-16V144c0-8.836 7.164-16 16-16s16 7.164 16 16v224c0 8.836-7.164 16-16 16zm-96 0c-8.836 0-16-7.164-16-16V144c0-8.836 7.164-16 16-16s16 7.164 16 16v224c0 8.836-7.164 16-16 16z"></path>
+                            </svg>
+                        </div>
+
+                    </div>
+                    <div class="game-buttons-container">
+                        <div class="end-game-buttons">
+                            <button class= "end-game-btn"><a class="nav-link" href="./game-board.html">GRAJ</a></button>
+                            <button class= "end-game-btn"><a class="nav-link" href="./game-menu.html">RANKING</a></button>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
     </main>
     <script src="./script/game/enemy.js"></script>
     <script src="./script/game/player.js"></script>
+<<<<<<< HEAD
     <script src="./script/game/timer.js"></script>
+=======
+    <script src="./script/game/walls.js"></script>
+    <script src="./script/game/enemy.js"></script>
+    <script src="./script/game/timer.js"></script>
+
+>>>>>>> develop
     <script src="./script/game/game.js"></script>
 </body>
 

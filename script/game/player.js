@@ -15,7 +15,7 @@ class Player {
         this.walls.forEach(e => {
             if (newPosition.x === e.x && newPosition.y === e.y) {
                 notCollision = false;
-                console.log('wall:', e);
+                // console.log('wall:', e);
             }
         });
         return notCollision;
@@ -23,6 +23,12 @@ class Player {
 
     enemyCheck() {
         if (this.x === game.enemy.x && this.y === game.enemy.y) {
+            this.handleLifeDown();
+        }
+    }
+
+    beerCheck() {
+        if (this.x === game.point.x && this.y === game.point.y) {
             this.handleLifeDown();
         }
     }
