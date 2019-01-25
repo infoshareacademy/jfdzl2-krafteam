@@ -89,10 +89,14 @@ class Game {
         console.log('game reset')
     }
     end() {
-        console.warn('game over')
+        const modal = document.querySelector('.modal');
+        modal.style.display = "block";
         clearInterval(setInterval());
         this.gameOver = true
     }
 }
 
 const game = new Game();
+
+
+
