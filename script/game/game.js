@@ -38,7 +38,8 @@ class Game {
     start() {
         console.log('game started');
         this.player = new Player(this.walls, this.lifeDown.bind(this));
-        //const walls = new Walls();
+        this.enemy = new Enemy(this.walls, this.player, this.lifeDown.bind(this));
+        const walls = new Walls();
         this.walls.generate();
 
     }
