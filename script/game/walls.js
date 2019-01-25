@@ -1,8 +1,8 @@
 class Walls {
-    constructor(){
+    constructor() {
         this.walls = []
         this.numberOfWalls = 80;
-        this.gameBoardContainer =  document.querySelector('.game-board');
+        this.gameBoardContainer = document.querySelector('.game-board');
     }
 
     generate() {
@@ -20,13 +20,13 @@ class Walls {
             let wallDiv = document.createElement('div')
 
             wallDiv.classList = 'wall game-element'
-            wallDiv.style.top = wall.y * 5 +'%'
-            wallDiv.style.left = wall.x * 5 +'%'
+            wallDiv.style.top = wall.y * 5 + '%'
+            wallDiv.style.left = wall.x * 5 + '%'
 
             this.gameBoardContainer.appendChild(wallDiv);
         })
     }
 }
 
-const walls = new Walls();
-walls.generate()
+// const walls = new Walls();
+// walls.generate()
