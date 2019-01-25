@@ -53,8 +53,8 @@ class Game {
 const game = new Game();
 
 
-const beer = document.querySelector('.food');
-beer.addEventListener('click', function(){
+
+window.addEventListener('click', function(){
     const modal = document.querySelector('.modal');
         modal.style.display = "block";
 });
