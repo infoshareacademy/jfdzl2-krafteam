@@ -4,7 +4,7 @@ class Game {
         this.lives = 3;
         this.walls = new Walls();
         this.player = new Player(this.walls, this.lifeDown.bind(this));
-        this.enemy = new Enemy(this.walls);
+        this.enemy = new Enemy(this.walls, this.player);
         this.gameOver = false;
     }
     lifeDown() {

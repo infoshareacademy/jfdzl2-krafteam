@@ -15,7 +15,6 @@ class Player {
         this.walls.walls.forEach(e => {
             if (newPosition.x === e.x && newPosition.y === e.y) {
                 notCollision = false;
-                console.log('wall:', e);
             }
         });
         return notCollision;
