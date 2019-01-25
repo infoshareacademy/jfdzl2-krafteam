@@ -68,15 +68,19 @@ class Game {
         if (this.points > 9) {
             if (this.points > 99) {
                 counter.innerText = this.points;
-            } counter.innerText = '0' + this.points;
+            }
+            counter.innerText = '0' + this.points;
             return
-        } counter.innerText = '00' + this.points;
+        }
+        counter.innerText = '00' + this.points;
         console.log('score up')
     }
     start() {
         console.log('game started');
-        this.Player = new Player(this.walls, this.lifeDown.bind(this));
-        this.enemy = new Enemy();
+        this.player = new Player(this.walls, this.lifeDown.bind(this));
+        const walls = new Walls();
+        walls.generate();
+
     }
     pause() {
         console.log('game paused');
