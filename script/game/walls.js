@@ -6,11 +6,16 @@ class Walls {
 
     generate() {
         for (let i = 0; i < 40; i++) {
-            //tworzy obiekt (parametry x, y, w ktorych jest funkcja math.random)
-            this.wallElements[i] = {
+            // tworzy obiekt (parametry x, y, w ktorych jest funkcja math.random)
+            // this.wallElements[i] = {
+            //     x: Math.round(Math.random() * 19),
+            //     y: Math.round(Math.random() * 19),
+            // }
+            this.wallElements.push({
                 x: Math.round(Math.random() * 19),
                 y: Math.round(Math.random() * 19),
-            }
+            })
+
             //console.log(this.elements[i])
         }
         console.log(this.wallElements)
@@ -23,10 +28,15 @@ class Walls {
         //appendChild
 
         //this.elements.forEach() {} ?
-        this.wallElement = document.querySelector('.game-board')
 
         for (let i = 0; i < 40; i++) {
-            let wall = document.createElement()
+            this.wallElements[i] = document.querySelector('.game-board')
+            let wall = this.wallElements[i].document.createElement('div')
+
+            wall.classList = 'wall game-element'
+            wall.style.top = this.y * 5 +'%'
+            wall.style.left = this.x * 5 +'%'
+
         }
     }
 
@@ -35,3 +45,4 @@ class Walls {
 
 const walls = new Walls();
 walls.generate()
+//walls.renderWalls()
