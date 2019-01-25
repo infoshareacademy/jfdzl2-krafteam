@@ -45,8 +45,16 @@ class Game {
         console.log('game reset')
     }
     end() {
-        console.warn('game over')
+        const modal = document.querySelector('.modal');
+        modal.style.display = "block";
     }
 }
 
 const game = new Game();
+
+
+const beer = document.querySelector('.food');
+beer.addEventListener('click', function(){
+    const modal = document.querySelector('.modal');
+        modal.style.display = "block";
+});
