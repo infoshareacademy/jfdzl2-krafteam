@@ -2,49 +2,9 @@ class Game {
     constructor() {
         this.points = 0;
         this.lives = 3;
-        this.walls = [{
-                x: 1,
-                y: 1
-            },
-            {
-                x: 6,
-                y: 7
-            },
-            {
-                x: 0,
-                y: 3
-            },
-            {
-                x: 13,
-                y: 2
-            },
-            {
-                x: 4,
-                y: 0
-            },
-            {
-                x: 18,
-                y: 15
-            },
-            {
-                x: 2,
-                y: 19
-            },
-            {
-                x: 16,
-                y: 3
-            },
-            {
-                x: 4,
-                y: 3
-            },
-            {
-                x: 2,
-                y: 9
-            },
-        ]
+        this.walls = new Walls();
         this.player = new Player(this.walls, this.lifeDown.bind(this));
-        this.enemy = new Enemy();
+        this.enemy = new Enemy(this.walls, this.player, this.lifeDown.bind(this));
         this.gameOver = false;
     }
     lifeDown() {
@@ -68,15 +28,19 @@ class Game {
         if (this.points > 9) {
             if (this.points > 99) {
                 counter.innerText = this.points;
-            } counter.innerText = '0' + this.points;
+            }
+            counter.innerText = '0' + this.points;
             return
-        } counter.innerText = '00' + this.points;
+        }
+        counter.innerText = '00' + this.points;
         console.log('score up')
     }
     start() {
         console.log('game started');
-        this.Player = new Player(this.walls, this.lifeDown.bind(this));
-        this.enemy = new Enemy();
+        this.player = new Player(this.walls, this.lifeDown.bind(this));
+        //const walls = new Walls();
+        this.walls.generate();
+
     }
     pause() {
         console.log('game paused');
@@ -85,7 +49,8 @@ class Game {
         console.log('game reset')
     }
     end() {
-        console.warn('game over')
+        const modal = document.querySelector('.modal');
+        modal.style.display = "block";
         clearInterval(setInterval());
         this.gameOver = true
     }
