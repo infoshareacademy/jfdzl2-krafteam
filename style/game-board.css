@@ -186,8 +186,8 @@ body {
 }
 
 .food {
+    position: absolute;
     color: #fed136;
-
 }
 
 .enemy {
