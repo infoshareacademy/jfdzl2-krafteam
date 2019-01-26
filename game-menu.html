@@ -61,7 +61,7 @@
                             <a class="nav-link" href="#game-scores">TABELA WYNIKÓW</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./game-board.html">START</a>
+                            <a class="nav-link" href="#" id="goToNickModal">START</a>
                         </li>
                     </ul>
                 </div>
@@ -173,7 +173,7 @@
         </div>
     </section>
     <section>
-        <div class="modal" style="display:block">
+        <div class="modal" id="modal-id" style="display:none">
             <div class="start-game-modal">
                 <header class="kraft-man">
                     <p>Kraft-Man</p>
@@ -181,13 +181,13 @@
                 <main class="start-game-main">
                     <div class="start-game-input">
                         <!-- <div class="score-info"> -->
-                            <input id="player-id" class="player-class" type="text" placeholder="podaj swój nick">
+                        <input id="nick-id" class="nick-class" type="text" placeholder="podaj swój nick">
                         <!-- </div> -->
                     </div>
                     <div class="game-buttons-container">
                         <div class="start-game-buttons">
                             <button class="start-game-btn">
-                                <a class="nav-btn" href="./game-board.html">GRAJ</a>
+                                <a class="nav-btn" href="#" id="btn-id">GRAJ</a>
                             </button>
                             <!-- <button class= "end-game-btn"><a class="nav-link" href="./game-menu.html">RANKING</a></button> -->
                         </div>
@@ -205,7 +205,8 @@
 
 
     <script src="script/cookies.js"></script>
-    <script src="script/game/game.js"></script>
+    <script src="script/main.js"></script>
+    <script src="script/nick.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
