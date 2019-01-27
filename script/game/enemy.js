@@ -159,17 +159,10 @@ class Enemy {
         };
     }
 
+    renderNewEnemy() {
+        const nEnemy = new Enemy(this.walls, this.player, this.handleLifeDown);
+        this.enemies.push(nEnemy);
+        return nEnemy
+    }
 
 }
-
-function renderNewEnemy() {
-    const nEnemy = new Enemy(this.walls, this.player, this.handleLifeDown);
-    enemies.push(nEnemy);
-    return nEnemy
-}
-
-
-let player = document.querySelector('.gamer')
-player.addEventListener('click', () => {
-    renderNewEnemy();
-})

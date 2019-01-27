@@ -39,9 +39,9 @@ class Game {
     start() {
         console.log('game started');
         this.walls.generate();
-        this.food.generate(this.walls);
         this.player = new Player(this.scoreUp.bind(this), this.food, this.walls, this.lifeDown.bind(this));
         this.enemy = new Enemy(this.walls, this.player, this.lifeDown.bind(this));
+        this.food.generate(this.walls);
     }
     pause() {
         console.log('game paused');
