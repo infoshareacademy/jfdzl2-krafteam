@@ -1,5 +1,6 @@
 class Player {
-    constructor(walls, lifeDown, poop) {
+    constructor(scoreUp, food, walls, lifeDown, poop) {
+        this.handleScoreUp = scoreUp;
         this.handleLifeDown = lifeDown;
         this.playerElement = document.querySelector('.gamer');
         this.x = 0;
@@ -7,13 +8,14 @@ class Player {
         this.registerEvents();
         this.renderPlayer(this.x, this.y);
         this.walls = walls;
-        this.enemy = poop
+        this.enemy = poop;
+        this.food = food;
     }
 
     wallsCheck(newPosition) {
         let notCollision = true;
         this.walls.walls.forEach(e => {
-            if (newPosition.x === e.x && newPosition.y === e.y) {
+            if(newPosition.x === e.x && newPosition.y === e.y) {
                 notCollision = false;
             }
         });
@@ -21,8 +23,15 @@ class Player {
     }
 
     enemyCheck() {
-        if (this.x === game.enemy.x && this.y === game.enemy.y) {
+        if(this.x === game.enemy.x && this.y === game.enemy.y) {
             this.handleLifeDown();
+        }
+    }
+
+    foodCheck() {
+        if(this.x === this.food.food.x && this.y === this.food.food.y) {
+            this.handleScoreUp();
+            this.food.generate();
         }
     }
 
@@ -45,7 +54,9 @@ class Player {
         if (this.x < 19 && this.wallsCheck(newPosition)) {
             this.x++;
             this.renderPlayer(this.x, this.y);
-        } this.enemyCheck()
+        }
+        this.enemyCheck();
+        this.foodCheck();
     }
     moveLeft() {
         const newPosition = {
@@ -55,7 +66,9 @@ class Player {
         if (this.x > 0 && this.wallsCheck(newPosition)) {
             this.x--;
             this.renderPlayer(this.x, this.y);
-        } this.enemyCheck()
+        }
+        this.enemyCheck();
+        this.foodCheck();
     }
     moveUp() {
         const newPosition = {
@@ -65,7 +78,9 @@ class Player {
         if (this.y > 0 && this.wallsCheck(newPosition)) {
             this.y--;
             this.renderPlayer(this.x, this.y);
-        } this.enemyCheck()
+        }
+        this.enemyCheck();
+        this.foodCheck();
     }
     moveDown() {
         const newPosition = {
@@ -75,7 +90,9 @@ class Player {
         if (this.y < 19 && this.wallsCheck(newPosition)) {
             this.y++;
             this.renderPlayer(this.x, this.y);
-        } this.enemyCheck()
+        }
+        this.enemyCheck();
+        this.foodCheck();
     }
     registerEvents() {
         window.addEventListener('keydown', e => {
