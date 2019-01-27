@@ -31,6 +31,10 @@ class Player {
     enemyCheck() {
         if (this.x === game.enemy.x && this.y === game.enemy.y) {
             this.handleLifeDown();
+            this.flashPlayer();
+            console.log(this);
+            console.log(this.flashPlayer())
+            
         }
     }
 
@@ -120,5 +124,14 @@ class Player {
                     return;
             }
         });
+    }
+    flashPlayer() {
+        this.playerElement.style.color = 'red'
+        setTimeout(
+            () => {
+                this.playerElement.style.color = 'rgb(243, 197, 141)'
+            },
+            500
+        )
     }
 }
