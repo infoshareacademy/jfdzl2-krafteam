@@ -163,7 +163,7 @@ class Enemy {
 }
 
 function renderNewEnemy() {
-    const nEnemy = new Enemy(this.walls, this.player, this.lifeDown);
+    const nEnemy = new Enemy(this.walls, this.player, this.handleLifeDown);
     enemies.push(nEnemy);
     return nEnemy
 }

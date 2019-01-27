@@ -27,6 +27,3 @@ class Walls {
         })
     }
 }
-
-// "const walls = new Walls();
-// walls.generate()"

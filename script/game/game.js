@@ -2,14 +2,15 @@ class Game {
     constructor() {
         this.points = 0;
         this.lives = 3;
+        this.food = new Food();
         this.walls = new Walls();
-        this.player = new Player(this.walls, this.lifeDown.bind(this));
-        this.enemy = new Enemy(this.walls, this.player, this.lifeDown.bind(this));
+        //this.player = new Player(this.scoreUp.bind(this), this.food, this.walls, this.lifeDown.bind(this));
+        //this.enemy = new Enemy(this.walls, this.player, this.lifeDown.bind(this));
         this.gameOver = false;
     }
     lifeDown() {
         // console.log('life down')
-        this.scoreUp()
+        // this.scoreUp()
         this.heartBreak()
         this.lives--;
         if (this.lives === 0) {
@@ -37,11 +38,10 @@ class Game {
     }
     start() {
         console.log('game started');
-        this.player = new Player(this.walls, this.lifeDown.bind(this));
-        this.enemy = new Enemy(this.walls, this.player, this.lifeDown.bind(this));
-        const walls = new Walls();
         this.walls.generate();
-
+        this.food.generate(this.walls);
+        this.player = new Player(this.scoreUp.bind(this), this.food, this.walls, this.lifeDown.bind(this));
+        this.enemy = new Enemy(this.walls, this.player, this.lifeDown.bind(this));
     }
     pause() {
         console.log('game paused');
