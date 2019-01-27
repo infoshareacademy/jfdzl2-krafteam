@@ -8,14 +8,14 @@ class Player {
         this.registerEvents();
         this.renderPlayer(this.x, this.y);
         this.walls = walls;
-        this.enemy = poop;
         this.food = food;
+        this.enemy = poop;
     }
 
     wallsCheck(newPosition) {
         let notCollision = true;
         this.walls.walls.forEach(e => {
-            if(newPosition.x === e.x && newPosition.y === e.y) {
+            if (newPosition.x === e.x && newPosition.y === e.y) {
                 notCollision = false;
             }
         });
@@ -23,15 +23,16 @@ class Player {
     }
 
     enemyCheck() {
-        if(this.x === game.enemy.x && this.y === game.enemy.y) {
+        if (this.x === game.enemy.x && this.y === game.enemy.y) {
             this.handleLifeDown();
         }
     }
 
     foodCheck() {
-        if(this.x === this.food.food.x && this.y === this.food.food.y) {
+        if (this.x === this.food.food.x && this.y === this.food.food.y) {
             this.handleScoreUp();
             this.food.generate();
+            game.enemy.renderNewEnemy();
         }
     }
 

@@ -30,7 +30,7 @@ class Food {
         this.food.x = Math.round(Math.random() * 19)
         this.food.y = Math.round(Math.random() * 19)
         game.walls.walls.forEach(e => {
-            if(e.x === this.food.x && e.y === this.food.y) {
+            if (e.x === this.food.x && e.y === this.food.y) {
                 this.generate();
             }
         });
