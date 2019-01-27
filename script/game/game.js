@@ -30,11 +30,12 @@ class Game {
             if (this.points > 99) {
                 counter.innerText = this.points;
             }
-            counter.innerText = '0' + this.points;
+            counter.innerText = this.points;
             return
         }
-        counter.innerText = '00' + this.points;
-        console.log('score up')
+        counter.innerText = this.points;
+        let beerPoint = document.querySelector('.beer-points')
+        beerPoint.innerText =this.points
     }
     start() {
         console.log('game started');
